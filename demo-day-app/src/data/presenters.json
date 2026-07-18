@@ -1,103 +1,165 @@
 [
   {
-    "id": "1",
-    "slug": "alex-rivera",
-    "name": "Alex Rivera",
-    "email": "alex@example.com",
-    "bio": "Full-stack developer with a passion for building tools that make complex processes accessible. Background in logistics and supply chain management before transitioning into software engineering through Next Chapter.",
-    "headshot": "/builders/alex-rivera/headshot.jpg",
-    "proudestAccomplishment": "Building a complete authentication system from scratch with role-based access control, including OAuth2 integration with Google and GitHub providers.",
-    "lessonLearned": "Planning matters. I spent the first two weeks coding without a clear architecture, then had to refactor everything. The second time around, I spent a full day planning before writing any code, and the result was dramatically better.",
+    "id": "joanne-liszewski",
+    "slug": "joanne-liszewski",
+    "name": "Joanne Liszewski",
+    "bio": "I've been building since 2014, starting with GUI interfaces in C++ and JavaScript, and because technology evolves so rapidly, I never stop learning. That early focus on user-centered design grew into full-stack development: React, Next.js, AI workflows, and accessible experiences shaped by my lived experience as a visually impaired developer. What drives me is seeing something I built make a difference. I specialize in apps that uplift communities, like Be In The Know: plain-English legal rights education for reentry, powered by JO, an AI assistant citing only human-reviewed legal sources.",
+    "headshot": "/presenters/joanne-liszewski/headshot.webp",
+    "proudestAccomplishment": "Turning a self-authored audit into action almost overnight. On July 11th I wrote a full gap analysis against my own README — flagging that the embedding provider would be unreachable in production, quotas were not enforced, cron routes were spoofable, and chat history vanished on refresh. Every one of those was fixed within a day, without loosening the constitution I set for JO: no answer without an approved, cited source, and no content entering the corpus without a human approving it. Watching that discipline hold — architecture-level guardrails that survive rapid iteration, backed by a test suite and CI that catch regressions — while turning a solo project into something a vulnerable population can actually trust, is what I'm proudest of.",
+    "lessonLearned": "Planning matters. ",
     "project": {
-      "name": "FlowBoard",
-      "tagline": "A visual project management tool that helps small teams track tasks, deadlines, and dependencies in real-time without the complexity of enterprise software.",
-      "category": "Productivity",
-      "targetAudience": "Small teams and freelancers who need project management without enterprise complexity.",
-      "problem": "Small teams are stuck between sticky notes and enterprise tools like Jira that require a dedicated admin. They need something visual, fast, and designed for teams of 2-10 people who want to see their work at a glance without a learning curve.",
+      "name": "Be in the Know",
+      "tagline": "\"Be In The Know is a free web app that turns the legal rights of 20 million Americans with records into plain English — with an AI guide, JO, that answers only from the law as it's currently on the books in your state, and cites it.\"",
+      "category": "Education",
+      "targetAudience": "Be In The Know is built for justice-impacted people navigating reentry, anyone on parole or probation, rebuilding after incarceration, or facing barriers to voting, housing, or work,  plus the families and support organizations standing with them.",
+      "problem": "People navigating reentry face fifty states' worth of rules about voting, expungement, housing, employment, and supervision. The information is public — but scattered, written at a college reading level, and different in every state. Most people act on rumor or assume the answer is no, and quietly give up rights the law already gives them. Generic AI chatbots make it worse: they hallucinate statutes with confidence, and here a wrong answer can cost someone their vote, home, or job. Be In The Know turns each state's current law into plain, sixth-grade-level English through JO, an assistant built so it can't guess: it answers only from a human-reviewed corpus of official law, cites every source, and refers users to legal aid when it doesn't know.",
       "keyFeatures": [
-        "Drag-and-drop Kanban board with real-time collaboration and live cursor tracking",
-        "Smart deadline detection that highlights at-risk tasks and suggests schedule adjustments",
-        "One-click project templates for common workflows like sprint planning and content calendars"
+        "Source-grounded chat that can't guess: JO answers exclusively from retrieved, human-approved statute text and plain-English summaries — never from model memory. Every answer cites its sources, an output guard replaces any uncited substantive answer with a response built directly from the sources, and JO refuses and routes to legal aid when no approved source covers the question.",
+        "Human-gated content pipeline with legislative monitoring: an automated weekly pipeline watches legislative activity in all 50 states (LegiScan) and flags laws that may have changed into a review queue — but nothing enters JO's answer corpus until a person reviews and approves it. Automation fetches, chunks, and embeds; only a human can approve.",
+        "Privacy-first design for a vulnerable population: anonymous by default with server-enforced daily quotas, no raw IP addresses stored (salted hashes only), no tracking cookies — plus optional free accounts with private cross-device chat history and one-click permanent deletion of everything."
       ],
-      "biggestChallenge": "Implementing real-time collaboration was significantly harder than expected. WebSocket connection management, conflict resolution when two users edit the same card, and maintaining consistent state across clients required me to rebuild the data layer twice.",
-      "futurePlans": "Add Gantt chart view, integrate with GitHub Issues and Slack notifications, and build a mobile companion app for quick status updates on the go.",
-      "techStack": ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Tailwind CSS", "Vercel"],
-      "aiUsage": ["Planning", "Debugging", "Code Generation"],
-      "liveUrl": "https://flowboard-demo.vercel.app",
-      "repositoryUrl": "https://github.com/arivera/flowboard",
-      "requiresLogin": true,
-      "demoCredentials": {
-        "username": "demo@flowboard.app",
-        "password": "DemoDay2026!"
-      },
-      "screenshots": {
-        "desktop": "/builders/alex-rivera/desktop.png",
-        "mobile": "/builders/alex-rivera/mobile.png"
-      },
-      "heroGraphic": "/builders/alex-rivera/hero.png"
-    },
-    "links": {
-      "github": "https://github.com/arivera",
-      "linkedin": "https://linkedin.com/in/alex-rivera-dev",
-      "portfolio": "https://alexrivera.dev"
-    },
-    "publishing": {
-      "displayOrder": 1,
-      "permissions": [
-        "Publish my submitted text.",
-        "Publish my uploaded screenshots.",
-        "Publish my headshot.",
-        "Publish links to my project and professional profiles."
+      "biggestChallenge": "Making an LLM trustworthy enough for legal information. Telling the model to be careful isn't enough — correctness had to be architectural: retrieval-first design where the model never decides what the law is, model-labeled vector search so mixed embeddings can't corrupt retrieval, an output guard that rejects ungrounded answers, prompt-injection hardening proven by a red-team battery, and a review gate automation can't bypass. The hard part wasn't making JO answer — it was making it refuse.",
+      "futurePlans": "Spanish-language JO, on a language-agnostic foundation. Our embedding model already maps Spanish questions into the same vector space as the English legal corpus, so retrieval needs no redesign — the build is generation: JO answers in the user's language while still drawing only from approved English law and citing every source, with a disclaimer on every translated answer that the official source is in English, plus a persistent language toggle and fully translated UI.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Vercel",
+        "Google Gemini API",
+        "MongoDB Atlas Vector Search",
+        "LegiScan Public API",
+        "Vercel Cron"
       ],
-      "approved": true
-    }
-  },
-  {
-    "id": "2",
-    "slug": "jordan-mitchell",
-    "name": "Jordan Mitchell",
-    "email": "jordan@example.com",
-    "bio": "Problem-solver turned developer. After years of navigating complex legal systems, I discovered that the same analytical thinking applies beautifully to building software. I specialize in creating tools that simplify bureaucratic processes.",
-    "headshot": "/builders/jordan-mitchell/headshot.jpg",
-    "proudestAccomplishment": "Integrating the OpenAI API to parse legal documents and generate plain-language summaries. Watching non-lawyers actually understand their rights for the first time was incredible.",
-    "lessonLearned": "AI is powerful but requires verification. I learned to always build a human review step into any AI-generated content, especially when legal accuracy matters. The AI got it right 85% of the time, but that other 15% could have serious consequences.",
-    "project": {
-      "name": "ClearPath Legal",
-      "tagline": "An AI-powered legal aid tool that translates complex legal documents into plain language and guides users through their rights and next steps.",
-      "category": "Legal Help",
-      "targetAudience": "Justice-impacted individuals and their families navigating re-entry legal requirements, housing applications, and record expungement processes.",
-      "problem": "People facing legal challenges often can't afford attorneys and struggle to understand the documents that control their lives. Legal aid organizations are overwhelmed, and existing self-help resources assume a reading level and legal literacy that many people don't have.",
-      "keyFeatures": [
-        "AI-powered document analysis that converts legal jargon into 6th-grade reading level summaries",
-        "Step-by-step guided workflows for common legal processes like expungement petitions and housing applications",
-        "Resource directory connecting users with local legal aid organizations and pro bono attorneys"
+      "aiUsage": [
+        "Code Generation"
       ],
-      "biggestChallenge": "Ensuring legal accuracy while making content accessible. I had to work with legal professionals to validate the AI's output and build guardrails that prevent the system from giving advice that could be harmful if followed incorrectly.",
-      "futurePlans": "Expand to cover immigration documents, add Spanish language support, and partner with legal aid organizations to integrate directly with their intake systems.",
-      "techStack": ["React", "TypeScript", "Next.js", "Python", "OpenAI API", "Supabase", "Tailwind CSS", "Vercel"],
-      "aiUsage": ["Planning", "Code Generation", "Documentation", "Learning Concepts"],
-      "liveUrl": "https://clearpath-legal.vercel.app",
-      "repositoryUrl": "https://github.com/jmitchell/clearpath-legal",
+      "liveUrl": "https://beintheknowjustaskjo.com/",
+      "repositoryUrl": "https://github.com/Jozewski/beintheknow.git",
       "requiresLogin": false,
       "screenshots": {
-        "desktop": "/builders/jordan-mitchell/desktop.png",
-        "mobile": "/builders/jordan-mitchell/mobile.png"
+        "desktop": "/presenters/joanne-liszewski/desktop.webp",
+        "mobile": "/presenters/joanne-liszewski/mobile.webp"
       }
     },
     "links": {
-      "github": "https://github.com/jmitchell",
-      "linkedin": "https://linkedin.com/in/jordan-mitchell-dev",
-      "portfolio": "https://jordanmitchell.dev"
+      "github": "https://github.com/Jozewski",
+      "linkedin": "https://www.linkedin.com/in/joanne-liszewski-437036125/",
+      "portfolio": "https://j-lportfolio-omega.vercel.app/"
     },
     "publishing": {
-      "displayOrder": 2,
-      "permissions": [
-        "Publish my submitted text.",
-        "Publish my uploaded screenshots.",
-        "Publish my headshot.",
-        "Publish links to my project and professional profiles."
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "shawn-cooley",
+    "slug": "shawn-cooley",
+    "name": "Shawn Cooley",
+    "bio": "Stuff and things",
+    "headshot": "/presenters/shawn-cooley/headshot.webp",
+    "proudestAccomplishment": "Voluptatibus nihil d",
+    "lessonLearned": "Sed irure qui ut qui",
+    "project": {
+      "name": "Veronica Lucas",
+      "tagline": "Laudantium nihil ve",
+      "category": "Health and Wellness",
+      "targetAudience": "Velit quia anim har",
+      "problem": "Illo dolore et sapie",
+      "keyFeatures": [
+        "Doloribus doloribus ",
+        "Reprehenderit occaec",
+        "Sed ut ad culpa mini"
       ],
-      "approved": true
+      "biggestChallenge": "Fugiat qui quod comm",
+      "futurePlans": "Quas ad non deserunt",
+      "techStack": [
+        "Cumque do cillum dol"
+      ],
+      "aiUsage": [
+        "Qui consectetur asp"
+      ],
+      "liveUrl": "https://www.xuxuxubajor.co.uk",
+      "repositoryUrl": "https://www.jyjununu.ca",
+      "requiresLogin": true,
+      "screenshots": {
+        "desktop": "",
+        "mobile": "/presenters/shawn-cooley/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://www.qihar.ca",
+      "linkedin": "https://www.xygylop.in",
+      "portfolio": "https://www.fydanikobagufy.org.au"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "jacqueline-delgado",
+    "slug": "jacqueline-delgado",
+    "name": "Jacqueline Delgado",
+    "bio": "Three decades in operations and human services taught me the expensive failures are the quiet ones. Now I build with AI, which mostly means learning whose conventions I inherited: calm returns violet because someone decided calm was violet, and \"reliable data\" is faithful to a moment that's already passed. Away from the keyboard I keep bees, and at it I build for the problems I can reach. I scrutinize the input harder than the output, not because I distrust the model but because I know what it's reflecting back.",
+    "headshot": "/presenters/jacqueline-delgado/headshot.webp",
+    "proudestAccomplishment": "The part I am most proud of is the architectural design — the two tables, the communication between the two apps, the theme, the color choice, the layout, and the features. Also running Vitest on the logic, because it showed me the poor behavior my vibe-coded version 2 had.",
+    "lessonLearned": "I learned that planning matters. It saves me from debugging a lot, and headaches later. Creating md files not only to reference, but also to guide and correct understanding is imperative. It was incredibly easy to create the UI with the md files; it had the color choice, the pin choice, the font choice, the position, the layout. The mark down files save so much time. Although, md files takes time to read in VS code and edit, and they get long, mark down files help organize my thoughts.",
+    "project": {
+      "name": "Narley",
+      "tagline": "Every pin on Narley's app was entered by the provider that's standing behind it. Enter your zip code and find shelter, food, employment opportunity or resources that are actually there.",
+      "category": "Community",
+      "targetAudience": "The apps are for justice-impacted people seeking shelter, food, employment, and resources after release. And providers and reentry organizations — where one edit replaces 20 phone calls and a wasted trip. Notes are as detailed as the provider likes.",
+      "problem": "Resource information moves slower than the resources do. A job fair, an apartment opening, a landlord taking applications — those windows are measured in days, and word goes out by mail or by a provider making 20 to 50 calls. It arrives after it's over.\nThe second problem is staleness. A mobile clinic changes hours. A tent drive runs out on the 20th but restarts in August. A car repair fund closes in June, reopens August 1st. Nobody updates the flyer, so people ride across town to a closed door.\nThe third is that the relationship ends at the appointment. Narley keeps it open: the provider edits the pin and leaves a note, the reader sees what's true today, saves the resource, and sets a reminder for the date it comes back. Goodwill staff shaped half the categories.",
+      "keyFeatures": [
+        "Providers edit their own pins in real time. When a resource fills, changes hours, or closes for the season, one edit updates everyone holding the app — replacing 20 to 50 phone calls and the trips those calls were meant to prevent.",
+        "A +Custom category for resources no taxonomy predicts — a tent, a coat drive, a one-day repair fund. Providers attach notes as detailed as they want: out until August 1st, accepting applications again in the fall, hours changed this week.",
+        "Readers search by ZIP, save a resource, and set reminders for the date it reopens. A fund closed in June with a note saying August 1st becomes a reminder on August 1st — so a dead window turns into a return date instead of a wasted trip."
+      ],
+      "biggestChallenge": "The hardest part wasn't the data — it was the AI. When a reader reported a resource closed, the model went hunting for evidence and found the reliable-but-stale sources: the live directory listing, the cached hours, the site that still resolves. Then it argued the reader was wrong. It wanted the org open because the internet still says so. I had to script the trust hierarchy explicitly: the person standing at the door outranks the website. Reliable isn't current, and the model had to be told.",
+      "futurePlans": "Two things, both blocked by paid Google APIs rather than by design. Translation at read time, not write time: a case manager pins in English, the reader sees the language they've set. The provider doesn't have to be bilingual to serve a bilingual client. And in-app directions — walking, biking, transit, driving on the Expo map, instead of sending people out to Google Maps. For someone without a car, the bus route is the difference between a resource that exists and one they can reach.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "OpenAI API",
+        "Anthropic API",
+        "Neon",
+        "Vercel",
+        "React Native",
+        "Expo SDK 54",
+        "Prisma 7",
+        "Vitest (352 tests)"
+      ],
+      "aiUsage": [
+        "Coding",
+        "refactoring",
+        "documenting",
+        "and debugging"
+      ],
+      "liveUrl": "https://narley.vercel.app/",
+      "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
+      "requiresLogin": true,
+      "screenshots": {
+        "desktop": "/presenters/jacqueline-delgado/desktop.webp",
+        "mobile": "/presenters/jacqueline-delgado/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/jdbostonbu-ops",
+      "linkedin": "linkedin.com/in/jacqueline-delgado-6a7bb7250",
+      "portfolio": "https://jacquelinedelgado.com/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
     }
   }
 ]

@@ -14,16 +14,21 @@ export default function DeveloperProfile({ presenter }: DeveloperProfileProps) {
       <div className="max-w-3xl">
         {/* Profile header */}
         <div className="flex flex-col sm:flex-row items-start gap-6 mb-8">
-          {/* Headshot */}
           <div className="shrink-0">
-            <div className="relative w-28 h-28 rounded-full overflow-hidden ring-4 ring-cream ring-offset-2 ring-offset-paper">
-              <Image
-                src={presenter.headshot}
-                alt={presenter.name}
-                fill
-                className="object-cover"
-                sizes="112px"
-              />
+            <div className="relative w-28 h-28 rounded-full overflow-hidden ring-4 ring-cream ring-offset-2 ring-offset-paper bg-ink/5 flex items-center justify-center">
+              {presenter.headshot ? (
+                <Image
+                  src={presenter.headshot}
+                  alt={presenter.name}
+                  fill
+                  className="object-cover"
+                  sizes="112px"
+                />
+              ) : (
+                <span className="text-3xl font-bold text-ink-muted">
+                  {presenter.name.charAt(0).toUpperCase()}
+                </span>
+              )}
             </div>
           </div>
 

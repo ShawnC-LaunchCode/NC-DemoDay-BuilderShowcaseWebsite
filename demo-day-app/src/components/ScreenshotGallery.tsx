@@ -15,15 +15,19 @@ export default function ScreenshotGallery({ presenter }: ScreenshotGalleryProps)
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 items-start">
         {/* Desktop screenshot */}
         <div className="card p-2 overflow-hidden">
-          <div className="relative aspect-video rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream">
-            <Image
-              src={screenshots.desktop}
-              alt={`${name} desktop view`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 66vw"
-              priority
-            />
+          <div className="relative aspect-video rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream flex items-center justify-center">
+            {screenshots.desktop ? (
+              <Image
+                src={screenshots.desktop}
+                alt={`${name} desktop view`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 66vw"
+                priority
+              />
+            ) : (
+              <span className="text-ink-muted text-sm">No desktop screenshot available</span>
+            )}
           </div>
           <div className="text-center py-2">
             <span className="text-label text-ink-muted">Desktop</span>
@@ -32,14 +36,18 @@ export default function ScreenshotGallery({ presenter }: ScreenshotGalleryProps)
 
         {/* Mobile screenshot */}
         <div className="card p-2 overflow-hidden">
-          <div className="relative aspect-[9/19.5] max-h-[500px] rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none">
-            <Image
-              src={screenshots.mobile}
-              alt={`${name} mobile view`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 50vw, 25vw"
-            />
+          <div className="relative aspect-[9/19.5] max-h-[500px] rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none flex items-center justify-center">
+            {screenshots.mobile ? (
+              <Image
+                src={screenshots.mobile}
+                alt={`${name} mobile view`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            ) : (
+              <span className="text-ink-muted text-sm text-center px-4">No mobile screenshot available</span>
+            )}
           </div>
           <div className="text-center py-2">
             <span className="text-label text-ink-muted">Mobile</span>

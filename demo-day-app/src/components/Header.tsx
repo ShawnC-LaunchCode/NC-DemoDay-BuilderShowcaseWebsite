@@ -36,13 +36,15 @@ export default function Header() {
         aria-label="Primary navigation"
       >
         {/* Branding */}
-        <Link
-          href="/"
-          className="flex items-center gap-3 group"
-          aria-label="Demo Day Showcase home"
-        >
+        <div className="flex items-center gap-3">
           {/* NC brand mark */}
-          <div className="flex items-center gap-0.5">
+          <a
+            href="https://www.nextchapterproject.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-0.5 hover:opacity-80 transition-opacity"
+            aria-label="Next Chapter Project"
+          >
             <div
               className="w-[3px] h-7 bg-indigo-soft rounded-sm"
               aria-hidden="true"
@@ -55,7 +57,7 @@ export default function Header() {
                 chapter
               </span>
             </div>
-          </div>
+          </a>
 
           {/* Divider */}
           <div
@@ -64,15 +66,19 @@ export default function Header() {
           />
 
           {/* Event badge */}
-          <div className="flex flex-col leading-tight">
-            <span className="text-paper/90 text-[13px] font-semibold tracking-wide">
+          <Link 
+            href="/" 
+            className="flex flex-col leading-tight hover:opacity-80 transition-opacity group"
+            aria-label="Demo Day Showcase home"
+          >
+            <span className="text-paper/90 text-[13px] font-semibold tracking-wide group-hover:text-paper transition-colors">
               Demo Day
             </span>
             <span className="text-label text-lime/80" style={{ fontSize: "0.5625rem" }}>
               Spring &apos;26
             </span>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         {/* Right side actions */}
         <div className="flex items-center gap-4">
@@ -84,7 +90,7 @@ export default function Header() {
           >
             About Next Chapter
           </Link>
-          <Link href="/" className="btn btn--accent is-sm">
+          <Link href="/builders" className="btn btn--accent is-sm">
             View All Products
           </Link>
         </div>

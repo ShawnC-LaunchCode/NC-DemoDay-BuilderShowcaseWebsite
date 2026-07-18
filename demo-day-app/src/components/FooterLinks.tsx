@@ -1,5 +1,5 @@
 import type { Presenter } from "@/types/presenter";
-import { GitFork, UserRound, Globe, Code2 } from "lucide-react";
+import { GitFork, UserRound, Globe, Code2, Calendar } from "lucide-react";
 
 interface FooterLinksProps {
   presenter: Presenter;
@@ -7,8 +7,15 @@ interface FooterLinksProps {
 
 export default function FooterLinks({ presenter }: FooterLinksProps) {
   const { links, project } = presenter;
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
 
   const allLinks = [
+    ...(bookingUrl ? [{
+      href: bookingUrl,
+      label: "Book a Meeting",
+      icon: Calendar,
+      accent: true,
+    }] : []),
     {
       href: project.liveUrl,
       label: "Live Demo",
@@ -50,7 +57,7 @@ export default function FooterLinks({ presenter }: FooterLinksProps) {
         <div className="kicker mb-6">Connect</div>
 
         <div className="flex flex-wrap gap-3">
-          {allLinks.map((link) => (
+          {allLinks.filter(link => !!link.href).map((link) => (
             <a
               key={link.label}
               href={link.href}
