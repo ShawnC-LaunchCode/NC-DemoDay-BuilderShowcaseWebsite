@@ -56,44 +56,59 @@
     }
   },
   {
-    "id": "shawn-cooley",
-    "slug": "shawn-cooley",
-    "name": "Shawn Cooley",
-    "bio": "Stuff and things",
-    "headshot": "/presenters/shawn-cooley/headshot.webp",
-    "proudestAccomplishment": "Voluptatibus nihil d",
-    "lessonLearned": "Sed irure qui ut qui",
+    "id": "jacqueline-delgado",
+    "slug": "jacqueline-delgado",
+    "name": "Jacqueline Delgado",
+    "bio": "Three decades in operations and human services taught me the expensive failures are the quiet ones. Now I build with AI, which mostly means learning whose conventions I inherited: calm returns violet because someone decided calm was violet, and \"reliable data\" is faithful to a moment that's already passed. Away from the keyboard I keep bees, and at it I build for the problems I can reach. I scrutinize the input harder than the output, not because I distrust the model but because I know what it's reflecting back.",
+    "headshot": "/presenters/jacqueline-delgado/headshot.webp",
+    "proudestAccomplishment": "The part I am most proud of is the architectural design — the two tables, the communication between the two apps, the theme, the color choice, the layout, and the features. Also running Vitest on the logic, because it showed me the poor behavior my vibe-coded version 2 had.",
+    "lessonLearned": "I learned that planning matters. It saves me from debugging a lot, and headaches later. Creating md files not only to reference, but also to guide and correct understanding is imperative. It was incredibly easy to create the UI with the md files; it had the color choice, the pin choice, the font choice, the position, the layout. The mark down files save so much time. Although, md files takes time to read in VS code and edit, and they get long, mark down files help organize my thoughts.",
     "project": {
-      "name": "Veronica Lucas",
-      "tagline": "Laudantium nihil ve",
-      "category": "Health and Wellness",
-      "targetAudience": "Velit quia anim har",
-      "problem": "Illo dolore et sapie",
+      "name": "Narley",
+      "tagline": "Every pin on Narley's app was entered by the provider that's standing behind it. Enter your zip code and find shelter, food, employment opportunity or resources that are actually there.",
+      "category": "Community",
+      "targetAudience": "The apps are for justice-impacted people seeking shelter, food, employment, and resources after release. And providers and reentry organizations — where one edit replaces 20 phone calls and a wasted trip. Notes are as detailed as the provider likes.",
+      "problem": "Resource information moves slower than the resources do. A job fair, an apartment opening, a landlord taking applications — those windows are measured in days, and word goes out by mail or by a provider making 20 to 50 calls. It arrives after it's over.\nThe second problem is staleness. A mobile clinic changes hours. A tent drive runs out on the 20th but restarts in August. A car repair fund closes in June, reopens August 1st. Nobody updates the flyer, so people ride across town to a closed door.\nThe third is that the relationship ends at the appointment. Narley keeps it open: the provider edits the pin and leaves a note, the reader sees what's true today, saves the resource, and sets a reminder for the date it comes back. Goodwill staff shaped half the categories.",
       "keyFeatures": [
-        "Doloribus doloribus ",
-        "Reprehenderit occaec",
-        "Sed ut ad culpa mini"
+        "Providers edit their own pins in real time. When a resource fills, changes hours, or closes for the season, one edit updates everyone holding the app — replacing 20 to 50 phone calls and the trips those calls were meant to prevent.",
+        "A +Custom category for resources no taxonomy predicts — a tent, a coat drive, a one-day repair fund. Providers attach notes as detailed as they want: out until August 1st, accepting applications again in the fall, hours changed this week.",
+        "Readers search by ZIP, save a resource, and set reminders for the date it reopens. A fund closed in June with a note saying August 1st becomes a reminder on August 1st — so a dead window turns into a return date instead of a wasted trip."
       ],
-      "biggestChallenge": "Fugiat qui quod comm",
-      "futurePlans": "Quas ad non deserunt",
+      "biggestChallenge": "The hardest part wasn't the data — it was the AI. When a reader reported a resource closed, the model went hunting for evidence and found the reliable-but-stale sources: the live directory listing, the cached hours, the site that still resolves. Then it argued the reader was wrong. It wanted the org open because the internet still says so. I had to script the trust hierarchy explicitly: the person standing at the door outranks the website. Reliable isn't current, and the model had to be told.",
+      "futurePlans": "Two things, both blocked by paid Google APIs rather than by design. Translation at read time, not write time: a case manager pins in English, the reader sees the language they've set. The provider doesn't have to be bilingual to serve a bilingual client. And in-app directions — walking, biking, transit, driving on the Expo map, instead of sending people out to Google Maps. For someone without a car, the bus route is the difference between a resource that exists and one they can reach.",
       "techStack": [
-        "Cumque do cillum dol"
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "OpenAI API",
+        "Anthropic API",
+        "Neon",
+        "Vercel",
+        "React Native",
+        "Expo SDK 54",
+        "Prisma 7",
+        "Vitest (352 tests)"
       ],
       "aiUsage": [
-        "Qui consectetur asp"
+        "Coding",
+        "refactoring",
+        "documenting",
+        "and debugging"
       ],
-      "liveUrl": "https://www.xuxuxubajor.co.uk",
-      "repositoryUrl": "https://www.jyjununu.ca",
+      "liveUrl": "https://narley.vercel.app/",
+      "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
       "requiresLogin": true,
       "screenshots": {
-        "desktop": "",
-        "mobile": "/presenters/shawn-cooley/mobile.webp"
+        "desktop": "/presenters/jacqueline-delgado/desktop.webp",
+        "mobile": "/presenters/jacqueline-delgado/mobile.webp"
       }
     },
     "links": {
-      "github": "https://www.qihar.ca",
-      "linkedin": "https://www.xygylop.in",
-      "portfolio": "https://www.fydanikobagufy.org.au"
+      "github": "https://github.com/jdbostonbu-ops",
+      "linkedin": "linkedin.com/in/jacqueline-delgado-6a7bb7250",
+      "portfolio": "https://jacquelinedelgado.com/"
     },
     "publishing": {
       "approved": true,
