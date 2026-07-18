@@ -1,0 +1,42 @@
+Demo Day ShowcaseDeveloper Implementation Guide
+This document is the authoritative implementation guide for the Demo Day Showcase. It combines product, UX, architecture, and engineering decisions into a single reference for the development team.
+1. Executive Summary
+Build a conference-quality showcase where projects are featured first and developers second. Use a React + TypeScript + Next.js application with a master-detail layout, static generation, and a data-driven architecture.
+2. Product Goals
+- Professional presentation- Easy navigation for 11 presenters- Useful before, during, and after Demo Day- Reusable process for future cohorts
+3. Non-Goals
+No authentication, CMS, database, admin portal, analytics, search, filters, ratings, or comments in v1.
+4. UX Principles
+Projects before people.Conference quality.One-click access to important actions.Responsive and accessible.Persistent sidebar with presenter name and project title.
+5. Information Architecture
+Header → Sidebar → Presenter View.Presenter View: Hero → Screenshots → Quick Facts → Project Overview → Tech Stack → Developer Profile → Professional Links.
+6. Technology Stack
+Next.js (App Router), React, TypeScript, Tailwind CSS, optional shadcn/ui, Zod, next/image.
+7. Folder Structure
+src/ app/ components/ data/ types/ lib/ scripts/public/presenters/{slug}/
+8. Component Specifications
+Header: branding.Sidebar: presenter navigation.PresenterCard: name + project.ProjectHero: project name, value proposition, CTA.ScreenshotGallery: desktop/mobile images.QuickFacts: category, audience, stack.ProjectOverview: problem, solution, features, challenge, roadmap.DeveloperProfile: photo, bio, accomplishment, lesson learned.FooterLinks: GitHub, LinkedIn, Portfolio, Repository.LivePreview: future enhancement.
+9. Presenter Data Model
+Single Presenter object passed into child components. Data stored in presenters.json and validated with Zod.
+10. Routing
+/ loads first presenter./presenters/[slug] loads a specific presenter while preserving the master-detail UI.
+11. Content Pipeline
+Google Form → Google Sheet → Editorial Review → Import Script → JSON + optimized assets → Static build.
+12. Google Form Mapping
+Every form section maps directly to a page section. Conditional login credentials. Optional hero graphic. Permissions required before publishing.
+13. Import Script
+Validate URLs, normalize whitespace, generate slugs, optimize images, create presenters.json, import approved rows only.
+14. Performance
+Static generation, lazy-loaded images, priority hero image, no unnecessary re-renders, only active presenter content updates.
+15. Accessibility
+Semantic HTML, keyboard navigation, WCAG AA color contrast, descriptive buttons, alt text for all images.
+16. Testing Checklist
+Verify every presenter loads.Every external link works.Responsive layouts.Broken image detection.Accessibility pass.
+17. Deployment
+Deploy to Vercel. Keep data in repository. Rebuild after importing approved presenter content.
+18. Definition of Done
+All presenter data renders correctly, links verified, responsive behavior complete, Lighthouse performance acceptable, QA checklist complete.
+19. Future Roadmap
+Embedded previews, QR codes, dark mode, search/filtering, progress indicator.
+20. Build Order
+1. Scaffold project2. Layout3. Sidebar4. Presenter page5. Responsive polish6. Import script7. QA8. Deploy

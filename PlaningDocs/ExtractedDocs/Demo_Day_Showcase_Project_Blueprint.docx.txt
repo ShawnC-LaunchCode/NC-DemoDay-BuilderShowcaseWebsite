@@ -1,0 +1,34 @@
+Demo Day Showcase - Project Blueprint & Build Specification
+PurposeBuild a conference-quality Demo Day Showcase that highlights projects first and developers second. The application should serve attendees before, during, and after the event, providing project information, professional links, and long-term discoverability.
+Product Vision
+Treat learners as professional developers. The site should feel like a startup demo day or conference showcase rather than a classroom assignment.
+Primary Audience
+Attendees, recruiters, hiring managers, industry partners, mentors, friends/family, and future learners.
+Core UX
+• Persistent left sidebar with presenter name and project title.• Master/detail layout.• Projects before people.• Responsive desktop/tablet/mobile.• Calm, spacious design inspired by modern conference sites.• Unique URL for each presenter (/presenters/{slug}).
+Presenter Page
+Order:1. Project name2. Value proposition (up to 300 chars)3. Experience Live Demo button4. Hero graphic (optional)5. Desktop/mobile screenshots6. Quick Facts7. Project Overview (Problem, Solution, Features, Challenge, Future)8. Technology9. Meet the Developer (photo, bio, accomplishment, lesson learned)10. GitHub, Repository, LinkedIn, Portfolio
+MVP Scope
+Include:• Homepage• Presenter sidebar• Individual presenter profiles• Responsive layout• Static data-driven contentExclude (v1):Search, filters, progress tracker, admin, auth, CMS, analytics, comments, ratings, favorites.
+Technical Stack
+React + TypeScript using Next.js.Tailwind CSS.Optional shadcn/ui for accessible primitives.Static generation preferred.
+Architecture
+Google Form -> Google Sheet -> Review -> Import Script -> presenters.json + optimized assets -> Static site.Never read directly from Google Sheets at runtime.
+Folder Structure
+public/presenters/{slug}/src/app/src/components/src/data/presenters.jsonsrc/types/presenter.tsscripts/importPresenters.ts
+Key Components
+HeaderSidebarPresenterListPresenterCardProjectHeroScreenshotGalleryQuickFactsProjectOverviewTechStackDeveloperProfileFooterLinksLivePreview (future)
+Presenter Data Model
+Presenter object includes:id, slug, name, headshot, bio,project(name, tagline, category, targetAudience, problem, solution, keyFeatures[], challenges, futurePlans, techStack[], liveUrl, repositoryUrl, screenshots, heroGraphic, embeddedPreviewEnabled),links(github, repository, linkedin, portfolio),publishing(displayOrder, approved, cohort).
+Google Form
+Collect:Presenter info, bio, headshot.Project identity.Value proposition.Problem, users, features, challenge, roadmap.Technology.AI usage.Proudest accomplishment.Lesson learned.Project/demo links.Screenshots.Hero graphic (optional).Permissions.Conditional login credentials if required.
+Import Script
+Validate required fields, URLs, generate slugs, optimize images, create presenters.json, report validation errors, import only approved rows.
+Performance & Accessibility
+Lazy load non-critical images.Prioritize hero image.Keyboard accessible.Semantic HTML.Responsive.Fast initial load.
+Future Backlog
+Embedded live preview with graceful fallback.QR codes.Dark mode.Search/filtering.Presentation progress indicator.
+Development Roadmap
+Sprint 1: Project setup, routing, layout, sidebar.Sprint 2: Presenter page components.Sprint 3: Responsive polish, links, images.Sprint 4: Import script, QA, deployment.
+Design Principles
+Projects before people.Professional, never academic.Conference quality.One-click to every important action.Data-driven architecture.Reusable for future cohorts.

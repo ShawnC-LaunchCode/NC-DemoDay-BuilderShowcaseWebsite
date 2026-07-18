@@ -1,0 +1,103 @@
+[
+  {
+    "id": "1",
+    "slug": "alex-rivera",
+    "name": "Alex Rivera",
+    "email": "alex@example.com",
+    "bio": "Full-stack developer with a passion for building tools that make complex processes accessible. Background in logistics and supply chain management before transitioning into software engineering through Next Chapter.",
+    "headshot": "/builders/alex-rivera/headshot.jpg",
+    "proudestAccomplishment": "Building a complete authentication system from scratch with role-based access control, including OAuth2 integration with Google and GitHub providers.",
+    "lessonLearned": "Planning matters. I spent the first two weeks coding without a clear architecture, then had to refactor everything. The second time around, I spent a full day planning before writing any code, and the result was dramatically better.",
+    "project": {
+      "name": "FlowBoard",
+      "tagline": "A visual project management tool that helps small teams track tasks, deadlines, and dependencies in real-time without the complexity of enterprise software.",
+      "category": "Productivity",
+      "targetAudience": "Small teams and freelancers who need project management without enterprise complexity.",
+      "problem": "Small teams are stuck between sticky notes and enterprise tools like Jira that require a dedicated admin. They need something visual, fast, and designed for teams of 2-10 people who want to see their work at a glance without a learning curve.",
+      "keyFeatures": [
+        "Drag-and-drop Kanban board with real-time collaboration and live cursor tracking",
+        "Smart deadline detection that highlights at-risk tasks and suggests schedule adjustments",
+        "One-click project templates for common workflows like sprint planning and content calendars"
+      ],
+      "biggestChallenge": "Implementing real-time collaboration was significantly harder than expected. WebSocket connection management, conflict resolution when two users edit the same card, and maintaining consistent state across clients required me to rebuild the data layer twice.",
+      "futurePlans": "Add Gantt chart view, integrate with GitHub Issues and Slack notifications, and build a mobile companion app for quick status updates on the go.",
+      "techStack": ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Tailwind CSS", "Vercel"],
+      "aiUsage": ["Planning", "Debugging", "Code Generation"],
+      "liveUrl": "https://flowboard-demo.vercel.app",
+      "repositoryUrl": "https://github.com/arivera/flowboard",
+      "requiresLogin": true,
+      "demoCredentials": {
+        "username": "demo@flowboard.app",
+        "password": "DemoDay2026!"
+      },
+      "screenshots": {
+        "desktop": "/builders/alex-rivera/desktop.png",
+        "mobile": "/builders/alex-rivera/mobile.png"
+      },
+      "heroGraphic": "/builders/alex-rivera/hero.png"
+    },
+    "links": {
+      "github": "https://github.com/arivera",
+      "linkedin": "https://linkedin.com/in/alex-rivera-dev",
+      "portfolio": "https://alexrivera.dev"
+    },
+    "publishing": {
+      "displayOrder": 1,
+      "permissions": [
+        "Publish my submitted text.",
+        "Publish my uploaded screenshots.",
+        "Publish my headshot.",
+        "Publish links to my project and professional profiles."
+      ],
+      "approved": true
+    }
+  },
+  {
+    "id": "2",
+    "slug": "jordan-mitchell",
+    "name": "Jordan Mitchell",
+    "email": "jordan@example.com",
+    "bio": "Problem-solver turned developer. After years of navigating complex legal systems, I discovered that the same analytical thinking applies beautifully to building software. I specialize in creating tools that simplify bureaucratic processes.",
+    "headshot": "/builders/jordan-mitchell/headshot.jpg",
+    "proudestAccomplishment": "Integrating the OpenAI API to parse legal documents and generate plain-language summaries. Watching non-lawyers actually understand their rights for the first time was incredible.",
+    "lessonLearned": "AI is powerful but requires verification. I learned to always build a human review step into any AI-generated content, especially when legal accuracy matters. The AI got it right 85% of the time, but that other 15% could have serious consequences.",
+    "project": {
+      "name": "ClearPath Legal",
+      "tagline": "An AI-powered legal aid tool that translates complex legal documents into plain language and guides users through their rights and next steps.",
+      "category": "Legal Help",
+      "targetAudience": "Justice-impacted individuals and their families navigating re-entry legal requirements, housing applications, and record expungement processes.",
+      "problem": "People facing legal challenges often can't afford attorneys and struggle to understand the documents that control their lives. Legal aid organizations are overwhelmed, and existing self-help resources assume a reading level and legal literacy that many people don't have.",
+      "keyFeatures": [
+        "AI-powered document analysis that converts legal jargon into 6th-grade reading level summaries",
+        "Step-by-step guided workflows for common legal processes like expungement petitions and housing applications",
+        "Resource directory connecting users with local legal aid organizations and pro bono attorneys"
+      ],
+      "biggestChallenge": "Ensuring legal accuracy while making content accessible. I had to work with legal professionals to validate the AI's output and build guardrails that prevent the system from giving advice that could be harmful if followed incorrectly.",
+      "futurePlans": "Expand to cover immigration documents, add Spanish language support, and partner with legal aid organizations to integrate directly with their intake systems.",
+      "techStack": ["React", "TypeScript", "Next.js", "Python", "OpenAI API", "Supabase", "Tailwind CSS", "Vercel"],
+      "aiUsage": ["Planning", "Code Generation", "Documentation", "Learning Concepts"],
+      "liveUrl": "https://clearpath-legal.vercel.app",
+      "repositoryUrl": "https://github.com/jmitchell/clearpath-legal",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/builders/jordan-mitchell/desktop.png",
+        "mobile": "/builders/jordan-mitchell/mobile.png"
+      }
+    },
+    "links": {
+      "github": "https://github.com/jmitchell",
+      "linkedin": "https://linkedin.com/in/jordan-mitchell-dev",
+      "portfolio": "https://jordanmitchell.dev"
+    },
+    "publishing": {
+      "displayOrder": 2,
+      "permissions": [
+        "Publish my submitted text.",
+        "Publish my uploaded screenshots.",
+        "Publish my headshot.",
+        "Publish links to my project and professional profiles."
+      ],
+      "approved": true
+    }
+  }
+]

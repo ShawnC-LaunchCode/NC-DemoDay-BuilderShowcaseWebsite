@@ -1,0 +1,62 @@
+Demo Day ShowcaseSoftware Design Specification (SDS)
+Version 1.0This Software Design Specification is the authoritative technical blueprint for the Demo Day Showcase. It consolidates the product vision, UX decisions, architecture, data model, implementation strategy, and engineering standards into a single reference suitable for handoff to a development team.
+1. Executive Summary
+This application showcases Demo Day projects in a conference-quality experience. It is a data-driven React/Next.js application with static generation, a master-detail interface, and reusable content workflow.
+2. Vision & Success Criteria
+Projects before people. Professional presentation. Valuable before, during, and after Demo Day. Reusable for future cohorts. Success is measured by ease of discovery, reliable links, polished UX, and maintainability.
+3. Stakeholders
+Host organization, instructors, learners, attendees, recruiters, hiring managers, mentors, sponsors, future cohorts.
+4. User Personas
+Attendee, Recruiter, Developer, Instructor/Administrator.
+5. Functional Requirements
+Presenter directory, profile pages, project overview, screenshots, tech stack, developer profile, external links, responsive layout, shareable URLs.
+6. Non-Functional Requirements
+Static generation, accessibility (WCAG AA), responsive design, fast load times, semantic HTML, maintainable codebase.
+7. Information Architecture
+Header → Sidebar → Presenter View.Presenter View = Hero → Gallery → Quick Facts → Overview → Tech → Developer → Links.
+8. UX Decisions
+Persistent sidebar. Presenter name with project beneath. Product-first hierarchy. Calm visual design inspired by modern conferences.
+9. Design System
+Tailwind CSS. Consistent spacing scale, typography hierarchy, rounded cards, restrained color palette, subtle motion, Lucide icons.
+10. Technical Architecture
+Next.js App Router, React, TypeScript, Tailwind CSS, optional shadcn/ui, Zod validation, next/image optimization.
+11. Folder Structure
+Document the src/app, components, data, types, lib, scripts, and public asset directories. Keep presenter assets grouped by slug.
+12. Component Catalog
+Header, Sidebar, PresenterList, PresenterCard, ProjectHero, ScreenshotGallery, QuickFacts, ProjectOverview, TechStack, DeveloperProfile, FooterLinks, LivePreview (future). Each component owns a single responsibility and receives a Presenter object where appropriate.
+13. Routing
+/ displays the showcase. /presenters/[slug] displays a selected presenter while preserving the same layout.
+14. Data Model
+Presenter object containing identity, project, links, publishing metadata, screenshots, hero asset, and optional embedded preview flag.
+15. Content Intake Workflow
+Google Form → Google Sheet → Editorial Review → Import Script → JSON + optimized assets → Static site.
+16. Google Form Specification
+Collect biography, project identity, value proposition, project overview, technologies, AI usage, accomplishments, lessons learned, links, assets, permissions, and conditional login credentials.
+17. Import Pipeline
+Validate required fields, URLs, generate slugs, normalize assets, optimize images, create presenters.json, report errors, import approved records only.
+18. State Management
+Minimal local state. Active presenter selection. No Redux or complex global state.
+19. Performance Strategy
+Static generation, lazy-loaded images, prioritized hero media, update only active presenter content.
+20. Accessibility
+Keyboard navigation, descriptive labels, semantic headings, alt text, focus states, color contrast.
+21. Error Handling
+Broken images, missing optional links, iframe failures, invalid imports, graceful fallbacks.
+22. Testing Strategy
+Unit tests for helpers, manual UI QA, responsive testing, link validation, accessibility review, content verification.
+23. Deployment
+Deploy on Vercel. Import approved content before production build. Version assets with Git.
+24. Coding Standards
+Strict TypeScript, ESLint, Prettier, meaningful component names, reusable utilities, no duplicated UI logic.
+25. Future Roadmap
+Embedded previews, QR codes, dark mode, search/filtering, presenter progress indicator, analytics if needed.
+26. Architecture Decision Records
+Record why major decisions were made: static architecture, Google Forms intake, project-first UX, data-driven rendering, Next.js selection.
+27. Build Plan
+Sprint 1: foundation.Sprint 2: layout/components.Sprint 3: responsive polish.Sprint 4: import pipeline.Sprint 5: QA and deployment.
+Appendix A
+Complete presenter TypeScript interfaces and Zod schemas (to be maintained alongside the codebase).
+Appendix B
+Google Form to JSON field mapping.
+Appendix C
+Definition of Done checklist for each feature and release.

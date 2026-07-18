@@ -1,0 +1,75 @@
+import type { Presenter } from "@/types/presenter";
+import { GitFork, UserRound, Globe, Code2 } from "lucide-react";
+
+interface FooterLinksProps {
+  presenter: Presenter;
+}
+
+export default function FooterLinks({ presenter }: FooterLinksProps) {
+  const { links, project } = presenter;
+
+  const allLinks = [
+    {
+      href: project.liveUrl,
+      label: "Live Demo",
+      icon: Globe,
+      accent: true,
+    },
+    {
+      href: project.repositoryUrl,
+      label: "Repository",
+      icon: Code2,
+      accent: false,
+    },
+    {
+      href: links.github,
+      label: "GitHub",
+      icon: GitFork,
+      accent: false,
+    },
+    {
+      href: links.linkedin,
+      label: "LinkedIn",
+      icon: UserRound,
+      accent: false,
+    },
+    {
+      href: links.portfolio,
+      label: "Portfolio",
+      icon: Globe,
+      accent: false,
+    },
+  ];
+
+  return (
+    <section
+      className="px-6 sm:px-10 lg:px-14 py-10 border-t border-border-default"
+      aria-label="Professional links"
+    >
+      <div className="max-w-3xl">
+        <div className="kicker mb-6">Connect</div>
+
+        <div className="flex flex-wrap gap-3">
+          {allLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`
+                btn group
+                ${link.accent ? "btn--accent" : "btn--secondary"}
+              `}
+            >
+              <link.icon
+                size={16}
+                className="transition-transform group-hover:-translate-y-0.5"
+              />
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
