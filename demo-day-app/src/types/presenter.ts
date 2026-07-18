@@ -23,7 +23,7 @@ export const ProjectSchema = z.object({
   category: z.string().min(1, "Category is required"),
   targetAudience: z.string(),
   problem: z.string().min(1, "Problem statement is required"),
-  keyFeatures: z.tuple([z.string(), z.string(), z.string()]),
+  keyFeatures: z.array(z.string()),
   biggestChallenge: z.string(),
   futurePlans: z.string().optional(),
   techStack: z.array(z.string()).min(1, "At least one technology is required"),
@@ -37,9 +37,9 @@ export const ProjectSchema = z.object({
 });
 
 export const LinksSchema = z.object({
-  github: z.string().url("GitHub URL must be a valid URL"),
-  linkedin: z.string().url("LinkedIn URL must be a valid URL"),
-  portfolio: z.string().url("Portfolio URL must be a valid URL"),
+  github: z.string(),
+  linkedin: z.string().optional(),
+  portfolio: z.string().optional(),
 });
 
 export const PublishingSchema = z.object({
