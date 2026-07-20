@@ -1,5 +1,5 @@
 import type { Presenter } from "@/types/presenter";
-import { AlertCircle, Lightbulb, Rocket, CheckCircle2 } from "lucide-react";
+import { AlertCircle, Lightbulb, Rocket, CheckCircle2, Users } from "lucide-react";
 
 interface ProjectOverviewProps {
   presenter: Presenter;
@@ -23,6 +23,19 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
           </div>
           <p className="text-ink-muted leading-relaxed pl-[42px]">
             {project.problem}
+          </p>
+        </div>
+
+        {/* Target Audience */}
+        <div>
+          <div className="flex items-center gap-2.5 mb-3">
+            <div className="w-8 h-8 rounded-full bg-teal-soft flex items-center justify-center">
+              <Users size={16} className="text-teal" />
+            </div>
+            <h3 className="text-heading text-lg">Target Audience</h3>
+          </div>
+          <p className="text-ink-muted leading-relaxed pl-[42px]">
+            {project.targetAudience}
           </p>
         </div>
 

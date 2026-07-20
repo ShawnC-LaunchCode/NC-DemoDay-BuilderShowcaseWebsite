@@ -36,13 +36,13 @@ export default function ScreenshotGallery({ presenter }: ScreenshotGalleryProps)
 
         {/* Mobile screenshot */}
         <div className="card p-2 overflow-hidden">
-          <div className="relative aspect-[9/19.5] max-h-[500px] rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none flex items-center justify-center">
+          <div className="relative aspect-[9/19.5] rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none flex items-center justify-center">
             {screenshots.mobile ? (
               <Image
                 src={screenshots.mobile}
                 alt={`${name} mobile view`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
             ) : (

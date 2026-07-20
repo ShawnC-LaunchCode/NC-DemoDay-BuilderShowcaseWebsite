@@ -1,5 +1,5 @@
 import type { Presenter } from "@/types/presenter";
-import { Tag, Users, Layers, Cpu } from "lucide-react";
+import { Tag, Layers, Cpu } from "lucide-react";
 
 interface QuickFactsProps {
   presenter: Presenter;
@@ -14,12 +14,6 @@ export default function QuickFacts({ presenter }: QuickFactsProps) {
       label: "Category",
       value: project.category,
       pillClass: "pill--indigo",
-    },
-    {
-      icon: Users,
-      label: "Target Audience",
-      value: project.targetAudience,
-      pillClass: "pill--teal",
     },
     {
       icon: Layers,
@@ -39,7 +33,7 @@ export default function QuickFacts({ presenter }: QuickFactsProps) {
 
   return (
     <section className="px-6 sm:px-10 lg:px-14 py-8" aria-label="Quick facts">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {facts.map((fact) => (
           <div
             key={fact.label}
