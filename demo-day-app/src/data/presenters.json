@@ -101,8 +101,8 @@
       "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
       "requiresLogin": true,
       "screenshots": {
-        "desktop": "/presenters/jacqueline-delgado/desktop.webp",
-        "mobile": "/presenters/jacqueline-delgado/mobile.webp"
+        "desktop": "https://github.com/jdbostonbu-ops/Narley/raw/main/Both%20apps%20working.gif",
+        "mobile": "https://i.imgur.com/zenNpyn.jpeg"
       }
     },
     "links": {
@@ -447,6 +447,88 @@
       "github": "https://github.com/philay3",
       "linkedin": "https://www.linkedin.com/in/phillip-anthony-75280778/",
       "portfolio": "https://www.philanthony.dev"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "michael-peacock",
+    "slug": "michael-peacock",
+    "name": "Michael Peacock",
+    "bio": "As a former US Navy Officer and UNC MPA graduate, I bring a disciplined, mission-oriented approach to full-stack software engineering. I specialize in building robust, AI-augmented applications using modern frameworks like Next.js, SQL, and third-party APIs. I am deeply passionate about forward-deployed engineering, thriving at the intersection of complex operational bottlenecks and user-centric technical solutions that deliver immediate, real-world impact.",
+    "headshot": "/presenters/michael-peacock/headshot.webp",
+    "proudestAccomplishment": "I am most proud of building a production-ready system that uses AI without surrendering human agency. Pathfinder’s deterministic Route Engine—not an LLM—decides sequencing, and only participant-confirmed facts can change a Route. Creating that trust architecture, documenting it as a product constitution, proving it through automated tests, and carrying the application through secure authentication, responsive design, deployment, and a custom production domain represents my growth from writing code to leading a complete product.",
+    "lessonLearned": "I learned that AI creates the most value when it operates within clear boundaries and every result is independently verified. Strong documentation, deterministic rules, test-driven development, and adversarial review turned AI’s speed into dependable engineering—and taught me that disciplined technical leadership matters more than simply generating code quickly.",
+    "project": {
+      "name": "Pathfinder",
+      "tagline": "You're out. Now what? Pathfinder maps what comes next, why it comes next, and what it unlocks.",
+      "category": "Community",
+      "targetAudience": "Pathfinder is designed primarily for people navigating reentry after incarceration, as well as others facing housing instability or documentation barriers—and the community organizations helping them take clear next steps.",
+      "problem": "People returning home after incarceration often face a maze of interdependent requirements—identification, housing, employment, transportation, benefits, and supervision—with no clear place to begin. Missing one prerequisite can delay everything that follows. Pathfinder turns a person’s confirmed circumstances into a transparent, step-by-step Route, highlights the most useful Focus Action, and visibly Reroutes as progress is made or circumstances change. This helps participants regain momentum and gives community organizations a consistent, trustworthy way to guide support without replacing human judgment.",
+      "keyFeatures": [
+        "Personalized Route and Focus Action based only on confirmed circumstances, showing the clearest next step and why it matters.",
+        "Transparent Rerouting that updates the Route as progress is made and clearly explains what changed and which Actions became available.",
+        "Participant-controlled Fact confirmation and Route History, ensuring unverified information never changes guidance while preserving a traceable record of progress."
+      ],
+      "biggestChallenge": "The greatest challenge was turning complex, interdependent reentry requirements into guidance that feels simple without becoming a black box. Pathfinder needed a deterministic Route Engine that produces consistent, explainable next steps from confirmed facts, while keeping AI strictly outside sequencing and confirmation decisions. The result balances technical rigor, participant control, and an approachable experience.",
+      "futurePlans": "I would run a structured pilot with reentry participants and community partners, publish a de-identified validation report, and use the findings to refine Route and Reroute comprehension. I would then add jurisdiction-specific resource connections, multilingual support, and privacy-preserving organizational insights so providers can identify service gaps without exposing or scoring individual participants.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Docker",
+        "Neon",
+        "Vercel",
+        "Groq API",
+        "Drizzle ORM",
+        "Auth.js/NextAuth",
+        "Resend",
+        "Zod",
+        "Vitest",
+        "Playwright",
+        "Turborepo",
+        "pnpm",
+        "GitHub Actions",
+        "and Cloudflare DNS."
+      ],
+      "aiUsage": [
+        "Planning",
+        "UI Design",
+        "Architecture",
+        "Code Generation",
+        "Debugging",
+        "Documentation",
+        "Learning Concepts",
+        "Testing",
+        "Refactoring",
+        "Multi-Agent Orchestration",
+        "Adversarial Review",
+        "Security Auditing",
+        "and Deployment Validation"
+      ],
+      "liveUrl": "https://pathfinder.windwardline.com",
+      "repositoryUrl": "https://github.com/windwardline/pathfinder",
+      "requiresLogin": true,
+      "demoCredentials": {
+        "username": "Demo Username: Use any email address you can access\nDemo Password: Passwordless—request the secure email sign",
+        "password": "in link (valid for 15 minutes)\n\nPathfinder intentionally avoids shared demo credentials; each reviewer can create a private session using their own email address."
+      },
+      "screenshots": {
+        "desktop": "/presenters/michael-peacock/desktop.webp",
+        "mobile": "/presenters/michael-peacock/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/windwardline",
+      "linkedin": "https://www.linkedin.com/in/michaellynnpeacock/",
+      "portfolio": "https://github.com/windwardline"
     },
     "publishing": {
       "approved": true,

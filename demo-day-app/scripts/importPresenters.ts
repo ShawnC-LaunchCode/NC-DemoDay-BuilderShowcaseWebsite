@@ -65,6 +65,10 @@ function extractDriveId(url: string) {
   return match ? match[1] : null;
 }
 
+function isPublicImageUrl(url: string) {
+  return typeof url === 'string' && /^(https?:\/\/).+\.(png|jpe?g|webp|avif|gif|svg)$/i.test(url.trim());
+}
+
 async function downloadAndOptimizeImage(drive: drive_v3.Drive, fileId: string, destPath: string, accessToken: string) {
   try {
     const res = await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`, {
@@ -121,9 +125,18 @@ async function main() {
     return;
   }
 
-  // Attempt to locate a "booking" column from the header row (flexible to header name)
   const headers = rows[0] || [];
-  const bookingHeaderIndex = headers.findIndex((h: string) => /booking|calendly|booking link|booking_url|bookingurl/i.test(String(h)));
+  const findColumn = (pattern: RegExp, fallback: number) => {
+    const idx = headers.findIndex((h: string) => pattern.test(String(h).trim()));
+    return idx >= 0 ? idx : fallback;
+  };
+
+  const bookingHeaderIndex = findColumn(/booking|calendly|booking link|booking_url|bookingurl/i, -1);
+  const heroGraphicHeaderIndex = findColumn(/hero.*graphic|hero.*image|hero graphic|hero image/i, 28);
+  const desktopOriginalHeaderIndex = findColumn(/desktop.*screenshot|desktop screenshot|desktop/i, 29);
+  const mobileOriginalHeaderIndex = findColumn(/mobile.*screenshot|mobile screenshot|mobile/i, 30);
+  const desktopReplacementHeaderIndex = findColumn(/replacement.*desktop|desktop.*replacement|replacement desktop/i, -1);
+  const mobileReplacementHeaderIndex = findColumn(/replacement.*mobile|mobile.*replacement|replacement mobile/i, -1);
 
   const presenters = [];
   
@@ -163,7 +176,7 @@ async function main() {
 
     // Handle Hero Graphic download
     let heroGraphicPath = '';
-    const heroGraphicUrl = row[28];
+    const heroGraphicUrl = row[heroGraphicHeaderIndex];
     if (heroGraphicUrl) {
       const driveId = extractDriveId(heroGraphicUrl);
       if (driveId && token.token) {
@@ -175,11 +188,14 @@ async function main() {
       }
     }
 
-    // Handle Desktop Screenshot download
+    // Determine desktop screenshot source: replacement URL wins over the original Drive upload.
     let desktopPath = '';
-    const desktopUrl = row[29];
-    if (desktopUrl) {
-      const driveId = extractDriveId(desktopUrl);
+    const desktopReplacementUrl = desktopReplacementHeaderIndex >= 0 ? (row[desktopReplacementHeaderIndex] || '') : '';
+    const desktopOriginalUrl = row[desktopOriginalHeaderIndex];
+    if (desktopReplacementUrl && isPublicImageUrl(desktopReplacementUrl)) {
+      desktopPath = desktopReplacementUrl.trim();
+    } else if (desktopOriginalUrl) {
+      const driveId = extractDriveId(desktopOriginalUrl);
       if (driveId && token.token) {
         const dest = path.join(presenterDir, 'desktop.webp');
         const success = await downloadAndOptimizeImage(drive, driveId, dest, token.token);
@@ -189,11 +205,14 @@ async function main() {
       }
     }
 
-    // Handle Mobile Screenshot download
+    // Determine mobile screenshot source: replacement URL wins over the original Drive upload.
     let mobilePath = '';
-    const mobileUrl = row[30];
-    if (mobileUrl) {
-      const driveId = extractDriveId(mobileUrl);
+    const mobileReplacementUrl = mobileReplacementHeaderIndex >= 0 ? (row[mobileReplacementHeaderIndex] || '') : '';
+    const mobileOriginalUrl = row[mobileOriginalHeaderIndex];
+    if (mobileReplacementUrl && isPublicImageUrl(mobileReplacementUrl)) {
+      mobilePath = mobileReplacementUrl.trim();
+    } else if (mobileOriginalUrl) {
+      const driveId = extractDriveId(mobileOriginalUrl);
       if (driveId && token.token) {
         const dest = path.join(presenterDir, 'mobile.webp');
         const success = await downloadAndOptimizeImage(drive, driveId, dest, token.token);
