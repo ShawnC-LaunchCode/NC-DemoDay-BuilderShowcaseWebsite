@@ -40,7 +40,7 @@
       "repositoryUrl": "https://github.com/Jozewski/beintheknow.git",
       "requiresLogin": false,
       "screenshots": {
-        "desktop": "/presenters/joanne-liszewski/desktop.webp",
+        "desktop": "",
         "mobile": "/presenters/joanne-liszewski/mobile.webp"
       }
     },
@@ -89,7 +89,7 @@
         "React Native",
         "Expo SDK 54",
         "Prisma 7",
-        "Vitest (352 tests)"
+        "Vitest (458 tests)"
       ],
       "aiUsage": [
         "Coding",
@@ -101,7 +101,7 @@
       "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
       "requiresLogin": true,
       "screenshots": {
-        "desktop": "/presenters/jacqueline-delgado/desktop.webp",
+        "desktop": "",
         "mobile": "/presenters/jacqueline-delgado/mobile.webp"
       }
     },
@@ -329,6 +329,124 @@
       "github": "https://github.com/melonmelonz",
       "linkedin": "https://www.linkedin.com/in/cameron-porterfield-462675228?trk=people-guest_people_search-card",
       "portfolio": "https://penn.goolz.org"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "darla-brown",
+    "slug": "darla-brown",
+    "name": "Darla Brown",
+    "bio": "Writer, AI Native Engineer, & software engineer who combines creativity with a passion for solving meaningful problems. After building a career as an Administrative Business Partner and Administrative Assistant, she transitioned into software engineering to develop innovative solutions in healthcare and digital wellness, including projects such as Veri-I and Wellness. She is also the author of 3 novels and 6 screenplays, and approaches every challenge with curiosity, persistence, and continuous learning, often joking that her best ideas come after \"sleeping on it\" and attending \"Google & YouTube University.\"",
+    "headshot": "/presenters/darla-brown/headshot.webp",
+    "proudestAccomplishment": "Building smart watch app",
+    "lessonLearned": "AI is powerful but requires verification.",
+    "project": {
+      "name": "Wellness Insight",
+      "tagline": "Wellness Insight is a wearable wellness platform that uses personalized haptic technology and future AI-powered insights to support emotional regulation, healthy routines, and successful community reentry for neurodivergent,  justice-involved individuals and all communities, especially youth.",
+      "category": "Health and Wellness",
+      "targetAudience": "\nWellness Insight is designed for neurodivergent individuals and justice-involved individuals, along with the caregivers, families, mentors, and community organizations that support their emotional well-being and successful community reentry.\n",
+      "problem": "Many neurodivergent and justice-involved individuals face challenges with emotional regulation, maintaining healthy routines, and staying connected to their support networks during community reentry. Existing wearable devices primarily focus on fitness rather than everyday wellness and emotional support. Wellness™ addresses this gap by providing personalized haptic communication, wellness reminders, and a companion mobile app that helps users build healthy habits, strengthen support systems, and promote independence. The platform is designed to complement, not replace, professional healthcare and community services.",
+      "keyFeatures": [
+        "Personalized Haptic Wellness Support: Users can create customized vibration patterns for grounding exercises, breathing reminders, medication schedules, appointments, focus cues, and wellness check-ins wearing a magnet wrist watch band.",
+        "Companion Support Network: Approved caregivers, mentors, family members, or support professionals can send discreet wellness check-ins and encouragement through the companion mobile app, helping users stay connected without interrupting their daily lives.",
+        " Future AI-Powered Wellness Insights: Future versions will analyze wellness trends and routine patterns to provide personalized recommendations that help users maintain healthy habits and identify opportunities for additional support, reminder medication, doctor appointment using a discreet like a coffee cup for medicine and cross reminder doctor appointment. The tapping press firm for 1 minute and release this is called acupressure point."
+      ],
+      "biggestChallenge": "The biggest challenge is designing a platform that provides meaningful, personalized wellness support while protecting user privacy, ensuring secure communication between devices, and creating an intuitive experience that works for individuals with diverse needs. Future AI features must also be transparent, ethical, and designed to support, not replace, human decision-making.\n",
+      "futurePlans": "A another month, I would complete a functional prototype of the Wear OS smartwatch and companion mobile app, conduct usability testing with community partners and behavioral health professionals, and incorporate feedback to refine the user experience. I would also begin developing the caregiver dashboard and lay the foundation for future AI-powered wellness insights. And getting 20 real user as tester, before it shipping Google play store. And built it out for Apple Watch",
+      "techStack": [
+        "Firebase",
+        "Java",
+        "Kotlin",
+        "Google Cloud"
+      ],
+      "aiUsage": [
+        "Refactoring"
+      ],
+      "liveUrl": "n/a",
+      "repositoryUrl": "https://github.com/darlanebrown/wellness",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/darla-brown/desktop.webp",
+        "mobile": "/presenters/darla-brown/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/darlanebrown",
+      "linkedin": " linkedin.com/in/darla-brown-b1383943",
+      "portfolio": "n/a"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "phillip-anthony",
+    "slug": "phillip-anthony",
+    "name": "Phillip Anthony",
+    "bio": "I'm a numbers person at heart. Prediction markets and crypto got me obsessed with calibration: not just predicting an outcome, but knowing how much to trust the prediction. That's what led to PhilaCourtOutcomes, which turns public Philadelphia court docket data into realistic sentencing distributions by charge and judge instead of single point guesses. Before this I spent seven years in IT, and these days I build full-stack with React, TypeScript, and Postgres.",
+    "headshot": "/presenters/phillip-anthony/headshot.webp",
+    "proudestAccomplishment": "Catching and fixing a data-integrity bug that automated tests couldn't see. Every internal consistency check passed, but a human ground-truth audit of 46 dockets reviewed line-by-line against source PDFs proved the parser was reading disposition dates from the wrong line. This error silently dropped thousands of dismissals and skewed some charges to ~96% guilty. After the fix and a full-corpus rebuild, the citywide mix corrected to roughly 49% dismissed/withdrawn. The site now tells the truth, and I can prove it against the source documents.",
+    "lessonLearned": "Internal validation proves consistency, not correctness. My pipeline had golden-file regression tests, invariant checks, and full-corpus equivalence tooling (all green) while systematically misreading the source data. Only auditing parser output against the actual PDFs revealed it. Now every acceptance claim traces to ground truth, not just to the machinery agreeing with itself.",
+    "project": {
+      "name": "Phila Court Outcomes",
+      "tagline": "Phila Court Outcomes shows how Philadelphia criminal cases actually resolved. It provides historical outcome and sentencing breakdowns by charge and judge, built from public court dockets, it helps people facing charges see real data instead of guesswork.",
+      "category": "Legal Help",
+      "targetAudience": "Primarily non-lawyers facing criminal charges in Philadelphia who need plain-language context about how cases like theirs historically ended. Secondarily, defense attorneys, journalists, and researchers studying court outcomes.",
+      "problem": "People facing criminal charges in Philadelphia have almost no way to know what typically happens in cases like theirs. Court dockets are public but scattered across thousands of individual PDFs, written in legal jargon, and impossible to aggregate by hand. Defendants make high-stakes decisions (such as whether to take a plea or what to expect at sentencing) with no factual baseline. Phila Court Outcomes scrapes, parses, and aggregates Municipal Court and Court of Common Pleas dockets into searchable, charge-level outcome and sentencing distributions. The data is presented in plain language with honest disclosures about data coverage, offering no predictions or legal advice, but simply showing what the record says.",
+      "keyFeatures": [
+        "Charge-level outcome distributions: search any Philadelphia criminal charge and see how cases with that charge historically resolved (dismissed, withdrawn, guilty plea, acquittal), built from a corpus of 30,000+ parsed court dockets.",
+        "Sentencing breakdowns for convictions. When cases like a given charge ended in conviction, see what sentences were actually imposed.",
+        "Judge-level views where available. This provides the same outcome data filterable by the presiding judge, with strict framing safeguards: no rankings, no comparisons, no predictive language, and a sample-size disclosure on every result."
+      ],
+      "biggestChallenge": "Parsing semi-structured court PDF dockets accurately at scale. A ground-truth audit of 46 dockets against source PDFs revealed the parser was reading disposition dates from the wrong line. This error inflated apparent guilty rates by silently dropping thousands of dated dismissals. Fixing it required a line-state-machine rewrite, golden-file regression tooling, and full-corpus delta verification before republishing.",
+      "futurePlans": "A conviction-denominated sentencing index (% receiving confinement, probation, or fines, with medians), a per-charge case-funnel view showing filed → disposed → convicted → sentenced volumes, and continued collection to close the full 2025-to-present filing window — plus the parser hardening backlog surfaced by the ground-truth audit.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Docker",
+        "Fastify",
+        "Kysely",
+        "pnpm workspaces",
+        "pdfplumber",
+        "Playwright",
+        "Render",
+        "Cloudflare"
+      ],
+      "aiUsage": [
+        "Planning",
+        "UI Design",
+        "Architecture",
+        "Code Generation",
+        "Debugging",
+        "Documentation",
+        "Learning Concepts",
+        "Testing",
+        "Refactoring"
+      ],
+      "liveUrl": "https://philacourtoutcomes.org/",
+      "repositoryUrl": "https://github.com/philay3/Phila-Court-Analytics/tree/main",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/phillip-anthony/desktop.webp",
+        "mobile": "/presenters/phillip-anthony/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/philay3",
+      "linkedin": "https://www.linkedin.com/in/phillip-anthony-75280778/",
+      "portfolio": "https://www.philanthony.dev"
     },
     "publishing": {
       "approved": true,
