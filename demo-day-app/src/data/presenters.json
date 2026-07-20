@@ -40,7 +40,7 @@
       "repositoryUrl": "https://github.com/Jozewski/beintheknow.git",
       "requiresLogin": false,
       "screenshots": {
-        "desktop": "",
+        "desktop": "/presenters/joanne-liszewski/desktop.webp",
         "mobile": "/presenters/joanne-liszewski/mobile.webp"
       }
     },
@@ -101,7 +101,7 @@
       "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
       "requiresLogin": true,
       "screenshots": {
-        "desktop": "",
+        "desktop": "/presenters/jacqueline-delgado/desktop.webp",
         "mobile": "/presenters/jacqueline-delgado/mobile.webp"
       }
     },
