@@ -15,12 +15,14 @@ export default function FooterLinks({ presenter }: FooterLinksProps) {
       label: "Live Demo",
       icon: Globe,
       accent: true,
+      large: true,
     },
     ...(bookingUrl ? [{
       href: bookingUrl,
       label: "Start a Conversation",
       icon: Calendar,
       accent: true,
+      large: true,
     }] : []),
     {
       href: project.repositoryUrl,
@@ -63,10 +65,7 @@ export default function FooterLinks({ presenter }: FooterLinksProps) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`
-                btn group
-                ${link.accent ? "btn--accent" : "btn--secondary"}
-              `}
+              className={`btn group ${link.accent ? "btn--accent" : "btn--secondary"} ${link.large ? "is-lg" : ""}`}
             >
               <link.icon
                 size={16}
