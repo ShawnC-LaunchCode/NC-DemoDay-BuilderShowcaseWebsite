@@ -14,7 +14,7 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
 
       <div className="space-y-10 max-w-3xl">
         {/* Problem */}
-        <div>
+        <div className="transition-transform duration-300 ease-out origin-left hover:scale-[1.15] cursor-default">
           <div className="flex items-center gap-2.5 mb-3">
             <div className="w-8 h-8 rounded-full bg-purple-soft flex items-center justify-center">
               <AlertCircle size={16} className="text-purple" />
@@ -27,7 +27,7 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
         </div>
 
         {/* Target Audience */}
-        <div>
+        <div className="transition-transform duration-300 ease-out origin-left hover:scale-[1.15] cursor-default">
           <div className="flex items-center gap-2.5 mb-3">
             <div className="w-8 h-8 rounded-full bg-teal-soft flex items-center justify-center">
               <Users size={16} className="text-teal" />
@@ -40,7 +40,7 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
         </div>
 
         {/* Key Features */}
-        <div>
+        <div className="transition-transform duration-300 ease-out origin-left hover:scale-[1.15] cursor-default">
           <div className="flex items-center gap-2.5 mb-4">
             <div className="w-8 h-8 rounded-full bg-teal-soft flex items-center justify-center">
               <CheckCircle2 size={16} className="text-teal" />
@@ -65,7 +65,7 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
         </div>
 
         {/* Biggest Challenge */}
-        <div>
+        <div className="transition-transform duration-300 ease-out origin-left hover:scale-[1.15] cursor-default">
           <div className="flex items-center gap-2.5 mb-3">
             <div className="w-8 h-8 rounded-full bg-indigo-bg flex items-center justify-center">
               <Lightbulb size={16} className="text-indigo" />
@@ -79,7 +79,7 @@ export default function ProjectOverview({ presenter }: ProjectOverviewProps) {
 
         {/* Future Plans (optional) */}
         {project.futurePlans && (
-          <div>
+          <div className="transition-transform duration-300 ease-out origin-left hover:scale-[1.15] cursor-default">
             <div className="flex items-center gap-2.5 mb-3">
               <div className="w-8 h-8 rounded-full bg-lime-soft flex items-center justify-center">
                 <Rocket size={16} className="text-ink/70" />
