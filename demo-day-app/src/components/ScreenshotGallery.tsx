@@ -12,9 +12,9 @@ export default function ScreenshotGallery({ presenter }: ScreenshotGalleryProps)
     <section className="px-6 sm:px-10 lg:px-14 py-10" aria-label="Product screenshots">
       <div className="kicker mb-6">Screenshots</div>
 
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 md:items-stretch">
         {/* Desktop screenshot */}
-        <div className="card p-2 overflow-hidden">
+        <div className="card p-2 overflow-hidden flex flex-col">
           <div className="relative aspect-video rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream flex items-center justify-center">
             {screenshots.desktop ? (
               <Image
@@ -35,8 +35,8 @@ export default function ScreenshotGallery({ presenter }: ScreenshotGalleryProps)
         </div>
 
         {/* Mobile screenshot */}
-        <div className="card p-2 overflow-hidden">
-          <div className="relative aspect-[9/19.5] rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none flex items-center justify-center">
+        <div className="card p-2 overflow-hidden flex flex-col">
+          <div className="relative aspect-[9/19.5] md:aspect-auto md:flex-1 md:min-h-0 rounded-[calc(var(--radius-lg)-8px)] overflow-hidden bg-cream mx-auto w-full max-w-[250px] md:max-w-none flex items-center justify-center">
             {screenshots.mobile ? (
               <Image
                 src={screenshots.mobile}

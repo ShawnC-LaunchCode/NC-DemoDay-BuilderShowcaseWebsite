@@ -95,7 +95,10 @@
         "Coding",
         "refactoring",
         "documenting",
-        "debugging"
+        "debugging",
+        "Testing",
+        "Learning Concepts",
+        "Planning"
       ],
       "liveUrl": "https://narley.vercel.app/",
       "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
