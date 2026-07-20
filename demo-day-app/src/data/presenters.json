@@ -535,5 +535,70 @@
       "displayOrder": 0,
       "permissions": []
     }
+  },
+  {
+    "id": "katherine-tensfeldt",
+    "slug": "katherine-tensfeldt",
+    "name": "Katherine Tensfeldt",
+    "bio": "Hi, I'm Katherine but I go by Kit. I am a full-stack developer who learned to code through the Persevere program and stuck around to teach the next cohort as a Teaching Assistant. I've got a real soft spot for design, and I care a lot about how an app looks and feels to use, not just whether it works. I like messy problems where the tech actually solves something real for people (or dogs too!). Give me a good reason to build something and I'm happy.",
+    "headshot": "/presenters/katherine-tensfeldt/headshot.webp",
+    "proudestAccomplishment": "The participant journey. Case-management tools are usually built for staff, and the person the program serves gets a login and a mystery. Nova works the other way: participants always see where they are, what comes next, and what is still needed. That view is driven by live state across the whole system, statuses stay calm and neutral even when the news is hard, and a match only advances with the participant's consent. A warm, hand-crafted design makes a compliance-heavy tool feel human, and it is not a mockup: it runs in production behind 800+ tests.",
+    "lessonLearned": "Planning and documentation matter twice as much with AI: an agent can only meet expectations that are written down.",
+    "project": {
+      "name": "Project Nova",
+      "tagline": "Project Nova gives people coming home from prison a paycheck and a purpose by paying them to care for shelter animals who need a second chance as much as they do.",
+      "category": "Employment",
+      "targetAudience": "People returning from incarceration who are working toward lasting employment — and the program coordinators, partner animal shelters, and grant funders who support them through one clear, trauma-informed workflow.",
+      "problem": "Steady work is among the strongest predictors of a successful return from incarceration, yet formerly incarcerated people face unemployment near 27% — locked out by stigma, resume gaps, and missing credentials. The transitional-employment programs built to bridge that gap run on spreadsheets, email threads, and paper timesheets scattered across program staff, host worksites, and funders. Coordinators lose hours to admin instead of people, grant compliance is fragile, and participants can't see where they stand. Project Nova replaces that patchwork with one workflow platform — application, screening, training, matching, placement, weekly approved hours, and grant-ready reporting — so staff time goes back to people, funders get defensible data, and participants always know their next step.",
+      "keyFeatures": [
+        "A guided, trauma-informed participant journey — a plain-language application you can save and resume, transparent screening and interview steps, onboarding tasks and certifications, and matching that only moves forward with the participant's consent.",
+        "The Placement Workspace — one operational hub for every active placement: site, supervisor, and schedule assignment, funding, activation blockers, case notes, evaluations, incident reports, and the path to a permanent-employment outcome.",
+        "Audit-ready hours and grant reporting — participants log weekly hours, shelters approve or return them for correction, approved weeks lock permanently, and funders get hours-by-funding-source, outcome summaries, and scoped exports backed by a full audit trail."
+      ],
+      "biggestChallenge": "Building one system that three organizations could all trust. Program staff, host shelters, and funders share each placement, but every query is organization-scoped on the server, background checks are restricted to a single audited role, and approved timesheets lock permanently — verified by security tests that try to cross each boundary. The harder half was product: screening and rejection flows that are honest without being punitive, protecting dignity as strictly as the data.",
+      "futurePlans": "The career-transition chapter — the mission's real endgame. As placements wind down, participants would get a credential wallet, work-history record, and reference requests they own and take with them, while alumni outcome tracking gives funders longitudinal proof the model works. Alongside it: in-app messaging and reminders (interviews, timesheets) to replace the email glue between organizations, and blended funding so one placement can draw on multiple grants the way real programs do.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Neon",
+        "Vercel",
+        "Prisma",
+        "Clerk",
+        "Playwright",
+        "Vitest",
+        "Claude Code"
+      ],
+      "aiUsage": [
+        "Planning",
+        "UI Design",
+        "Architecture",
+        "Code Generation",
+        "Debugging",
+        "Documentation",
+        "Learning Concepts",
+        "Testing"
+      ],
+      "liveUrl": "https://project-nova.app/",
+      "repositoryUrl": "https://github.com/kithrine/project-nova",
+      "requiresLogin": true,
+      "screenshots": {
+        "desktop": "/presenters/katherine-tensfeldt/desktop.webp",
+        "mobile": "/presenters/katherine-tensfeldt/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/kithrine",
+      "linkedin": "https://www.linkedin.com/in/kithrine/",
+      "portfolio": "https://kithrine.vercel.app/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
   }
 ]
