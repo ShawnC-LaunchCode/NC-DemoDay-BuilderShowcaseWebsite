@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
 import { createWriteStream } from 'fs';
 import { pipeline } from 'stream/promises';
@@ -8,7 +9,8 @@ import { getAuthClient } from './auth';
 import { z } from 'zod';
 import sharp from 'sharp';
 
-dotenv.config({ path: path.join(process.cwd(), '.env.local') });
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, '..', '.env.local') });
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "import-presenters": "tsx scripts/importPresenters.ts"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",

@@ -68,7 +68,7 @@
       "tagline": "Every pin on Narley's app was entered by the provider that's standing behind it. Enter your zip code and find shelter, food, employment opportunity or resources that are actually there.",
       "category": "Community",
       "targetAudience": "The apps are for justice-impacted people seeking shelter, food, employment, and resources after release. And providers and reentry organizations — where one edit replaces 20 phone calls and a wasted trip. Notes are as detailed as the provider likes.",
-      "problem": "Resource information moves slower than the resources do. A job fair, an apartment opening, a landlord taking applications — those windows are measured in days, and word goes out by mail or by a provider making 20 to 50 calls. It arrives after it's over.\nThe second problem is staleness. A mobile clinic changes hours. A tent drive runs out on the 20th but restarts in August. A car repair fund closes in June, reopens August 1st. Nobody updates the flyer, so people ride across town to a closed door.\nThe third is that the relationship ends at the appointment. Narley keeps it open: the provider edits the pin and leaves a note, the reader sees what's true today, saves the resource, and sets a reminder for the date it comes back. Goodwill staff shaped half the categories.",
+      "problem": "Resource information moves slower than the resources do. A job fair, an apartment opening, a landlord taking applications — those windows are measured in days, and word goes out by mail or by a provider making 20 to 50 calls. It arrives after it's over.\nThe second problem is staleness. A mobile clinic changes hours. A tent drive runs out on the 20th but restarts in August. A car repair fund closes in June, reopens August 1st. Nobody updates the flyer, so people ride across town to a closed door.\nThe third is that the relationship ends at the appointment. Narley keeps it open: the provider edits the pin and leaves a note, the reader sees what's true today, saves the resource, and sets a reminder for the date it comes back. Goodwill of Southern New England staff shaped half the categories.",
       "keyFeatures": [
         "Providers edit their own pins in real time. When a resource fills, changes hours, or closes for the season, one edit updates everyone holding the app — replacing 20 to 50 phone calls and the trips those calls were meant to prevent.",
         "A +Custom category for resources no taxonomy predicts — a tent, a coat drive, a one-day repair fund. Providers attach notes as detailed as they want: out until August 1st, accepting applications again in the fall, hours changed this week.",
@@ -95,7 +95,7 @@
         "Coding",
         "refactoring",
         "documenting",
-        "and debugging"
+        "debugging"
       ],
       "liveUrl": "https://narley.vercel.app/",
       "repositoryUrl": "https://github.com/jdbostonbu-ops/Narley",
@@ -107,8 +107,121 @@
     },
     "links": {
       "github": "https://github.com/jdbostonbu-ops",
-      "linkedin": "linkedin.com/in/jacqueline-delgado-6a7bb7250",
+      "linkedin": "https://www.linkedin.com/in/jacqueline-delgado-6a7bb7250/",
       "portfolio": "https://jacquelinedelgado.com/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "destiny-mills",
+    "slug": "destiny-mills",
+    "name": "Destiny Mills",
+    "bio": "Hi, I’m Destiny Mills, a full-stack software developer with a background in legal support and paralegal studies. I’m passionate about building AI-powered tools that solve real-world problems, especially in legal access, education, and healthcare. I enjoy turning complex workflows into intuitive, user-centered applications that make information more accessible and meaningful",
+    "headshot": "/presenters/destiny-mills/headshot.webp",
+    "proudestAccomplishment": "I’m most proud of building an AI-powered legal education platform around a real problem I experienced firsthand. The application uses a structured intake process to generate personalized legal research roadmaps, translates complex legal language into plain English, and supports both individual and correctional institution users through secure role-based access and AI integration.",
+    "lessonLearned": "I learned that solving a real user problem is more important than adding features. AI is a powerful tool, but it works best when paired with thoughtful system design, user feedback, and clear guardrails to ensure the information is educational, accurate, and easy to understand.",
+    "project": {
+      "name": "CaseCompass AI",
+      "tagline": "CaseCompass AI is an AI-powered legal education platform that personalizes legal research, translates complex case law into plain language, and helps users confidently navigate the legal system.",
+      "category": "Legal Help",
+      "targetAudience": "CaseCompass AI is designed for individuals navigating the legal system, correctional institutions, legal aid organizations, educators, and anyone who needs legal information explained in clear, understandable language.",
+      "problem": "CaseCompass AI addresses the gap between access to legal information and the ability to understand it. Millions of self-represented individuals—including incarcerated people, legal aid clients, and those who cannot afford an attorney—struggle to navigate complex legal research, court opinions, and legal terminology. Existing research tools assume legal knowledge, leaving many without meaningful guidance. CaseCompass AI transforms legal research into an educational, step-by-step experience that helps users understand the law, organize their research, and confidently navigate the legal system.",
+      "keyFeatures": [
+        "AI-guided legal intake that builds a personalized legal research roadmap.",
+        "Plain-language explanations of court opinions, legal terminology, and case citations.",
+        "Educational legal research tools with source citations that teach users how to research—not replace an attorney."
+      ],
+      "biggestChallenge": "Building an AI platform that simplifies complex legal information while remaining accurate, educational, and transparent. The system must avoid giving legal advice, ground every response in authoritative legal sources, adapt explanations to different literacy levels, and maintain security for both public and correctional institution deployments. Balancing usability with legal reliability has been the project’s biggest challenge.\n\nThese responses highlight the educational mission, technical complexity, and real-world impact qualities that tend to resonate well with both technical reviewers and potential industry partners.",
+      "futurePlans": "Given another month, I would integrate Westlaw alongside CaseCompass AI so users could seamlessly move between AI-guided research and primary legal sources. I would also add bilingual support to make the platform accessible to a broader population, helping overcome both language and literacy barriers while improving meaningful access to legal research.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Supabase",
+        "OpenAI API",
+        "Anthropic API",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "aiUsage": [
+        "Architecture"
+      ],
+      "liveUrl": "https://casecompassai.com",
+      "repositoryUrl": "https://github.com/destinyheather92/CaseCompassAI",
+      "requiresLogin": true,
+      "screenshots": {
+        "desktop": "/presenters/destiny-mills/desktop.webp",
+        "mobile": "/presenters/destiny-mills/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/destinyheather92",
+      "linkedin": "https://linkedin.com/in/destinyhmills225",
+      "portfolio": "https://dmdigitalboutique.com"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "summer-halsey",
+    "slug": "summer-halsey",
+    "name": "Summer Halsey",
+    "bio": "I'm a full-stack engineer passionate about building software that solves meaningful real-world problems. My approach starts with architecture, documentation, and thoughtful system design before implementation, using AI to improve engineering quality rather than replace engineering judgment. I'm especially interested in developing secure, maintainable applications that make complex information easier for people to understand and use.",
+    "headshot": "/presenters/summer-halsey/headshot.webp",
+    "proudestAccomplishment": "I'm most proud of building an AI system designed for trust. By grounding every response in users uploaded documents and prioritizing privacy from the start, Verity is better suited for high-consequence situations than a generic AI chatbot.",
+    "lessonLearned": "I learned that good architecture gives AI direction. The more clearly I defined the system, constraints, and requirements upfront, the better the AI-assisted development process became.",
+    "project": {
+      "name": "Verity",
+      "tagline": "Don't lose your freedom to a technicality. Upload your documents, ask anything, and stop the guesswork.",
+      "category": "Legal Help",
+      "targetAudience": "Individuals on probation or parole, especially those managing multiple supervision documents across counties or states. Verity also supports attorneys, case managers, reentry organizations, and family members assisting with successful reentry.",
+      "problem": "Probation and parole documents are often written in dense legal language that's difficult to understand during an already stressful transition back into the community. Missing a reporting requirement, misunderstanding a travel restriction, or overlooking a deadline can have serious consequences. While AI has made legal information more accessible, generic chatbots can hallucinate or provide inaccurate guidance—creating unnecessary risk in high-consequence situations. Verity addresses this by helping users understand their own supervision documents through plain-language, source-grounded explanations tied directly to the documents they've uploaded.",
+      "keyFeatures": [
+        "1. OCR-Powered Document Processing  Upload supervision documents from your phone or computer. Verity automatically extracts, organizes, and structures the content, making complex legal paperwork searchable and easier to navigate.",
+        "2. Source-Grounded AI Chat\n\nAsk questions about one or multiple uploaded documents at the same time. Every response is grounded in the user's documents—not the AI's memory—to provide explanations tied directly to the original source.",
+        "3. Privacy-First Document Workspace  Manage supervision documents in one secure workspace with ownership-based access, optional accounts, and automatic cleanup for anonymous sessions to help protect sensitive personal information."
+      ],
+      "biggestChallenge": "The biggest challenge was designing an AI system people could trust in high-consequence situations. Rather than relying on a generic chatbot, I built Verity around source-grounded responses tied directly to uploaded documents, while treating privacy, document ownership, OCR quality, and secure data handling as architectural requirements instead of optional features.",
+      "futurePlans": "I'd expand Verity beyond probation and parole by supporting additional legally binding documents such as custody agreements, rental contracts, employment agreements, and court orders. I'd also improve OCR accuracy, multilingual support, and document organization so users can securely manage multiple documents in one workspace and ask questions across them with greater confidence.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "OpenAI API",
+        "Tailwind CSS",
+        "Neon",
+        "Vercel",
+        "OpenAI Vision (OCR)",
+        "Prisma"
+      ],
+      "aiUsage": [
+        "Architecture"
+      ],
+      "liveUrl": "https://my-verity.com/",
+      "repositoryUrl": "https://github.com/summer-marie/conditions-translator.git",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/summer-halsey/desktop.webp",
+        "mobile": "/presenters/summer-halsey/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/summer-marie",
+      "linkedin": "https://www.linkedin.com/in/summer-halsey/",
+      "portfolio": "https://shalsey.dev/"
     },
     "publishing": {
       "approved": true,
