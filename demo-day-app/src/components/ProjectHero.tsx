@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Presenter } from "@/types/presenter";
-import { ExternalLink, Lock } from "lucide-react";
+import { ExternalLink, Lock, Calendar } from "lucide-react";
 
 interface ProjectHeroProps {
   presenter: Presenter;
@@ -43,14 +43,20 @@ export default function ProjectHero({ presenter }: ProjectHeroProps) {
               Experience Live Demo
             </a>
 
-            <a
-              href="https://calendly.com/britannia-bloom/demo-day-follow-up"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--muted is-lg"
-            >
-              Book a follow-up
-            </a>
+            {(() => {
+              const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || 'https://calendly.com/britannia-bloom/demo-day-follow-up';
+              return (
+                <a
+                  href={bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--accent is-lg group"
+                >
+                  <Calendar size={18} />
+                  Start a Conversation
+                </a>
+              );
+            })()}
 
             {/* Login required indicator */}
             {project.requiresLogin && project.demoCredentials && (
