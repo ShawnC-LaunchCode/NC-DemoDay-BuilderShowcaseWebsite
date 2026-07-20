@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Presenter } from "@/types/presenter";
 import { ExternalLink, Lock } from "lucide-react";
 
@@ -42,6 +43,15 @@ export default function ProjectHero({ presenter }: ProjectHeroProps) {
               Experience Live Demo
             </a>
 
+            <a
+              href="https://calendly.com/britannia-bloom/demo-day-follow-up"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--muted is-lg"
+            >
+              Book a follow-up
+            </a>
+
             {/* Login required indicator */}
             {project.requiresLogin && project.demoCredentials && (
               <div className="flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-md)] bg-paper/10 border border-paper/10">
@@ -62,6 +72,21 @@ export default function ProjectHero({ presenter }: ProjectHeroProps) {
           </div>
         </div>
       </div>
+
+      {project.heroGraphic ? (
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-80">
+          <div className="absolute bottom-0 right-0 hidden h-[28rem] w-[28rem] translate-x-12 translate-y-12 overflow-hidden rounded-[2rem] border border-white/10 bg-paper/5 shadow-[0_40px_120px_-40px_rgba(255,255,255,0.8)] md:block">
+            <Image
+              src={project.heroGraphic}
+              alt={`${project.name} hero graphic`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 30vw"
+              priority
+            />
+          </div>
+        </div>
+      ) : null}
 
       {/* Bottom gradient fade */}
       <div

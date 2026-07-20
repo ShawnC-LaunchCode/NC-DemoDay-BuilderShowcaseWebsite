@@ -121,6 +121,10 @@ async function main() {
     return;
   }
 
+  // Attempt to locate a "booking" column from the header row (flexible to header name)
+  const headers = rows[0] || [];
+  const bookingHeaderIndex = headers.findIndex((h: string) => /booking|calendly|booking link|booking_url|bookingurl/i.test(String(h)));
+
   const presenters = [];
   
   // Ensure public directory exists
@@ -157,9 +161,23 @@ async function main() {
       }
     }
 
+    // Handle Hero Graphic download
+    let heroGraphicPath = '';
+    const heroGraphicUrl = row[28];
+    if (heroGraphicUrl) {
+      const driveId = extractDriveId(heroGraphicUrl);
+      if (driveId && token.token) {
+        const dest = path.join(presenterDir, 'hero-graphic.webp');
+        const success = await downloadAndOptimizeImage(drive, driveId, dest, token.token);
+        if (success) {
+          heroGraphicPath = `/presenters/${slug}/hero-graphic.webp`;
+        }
+      }
+    }
+
     // Handle Desktop Screenshot download
     let desktopPath = '';
-    const desktopUrl = row[28];
+    const desktopUrl = row[29];
     if (desktopUrl) {
       const driveId = extractDriveId(desktopUrl);
       if (driveId && token.token) {
@@ -173,7 +191,7 @@ async function main() {
 
     // Handle Mobile Screenshot download
     let mobilePath = '';
-    const mobileUrl = row[29];
+    const mobileUrl = row[30];
     if (mobileUrl) {
       const driveId = extractDriveId(mobileUrl);
       if (driveId && token.token) {
@@ -187,6 +205,9 @@ async function main() {
 
     // Parse features (combining the 3 columns)
     const keyFeatures = [row[11], row[12], row[13]].filter(Boolean);
+
+    // Capture optional booking link if the form includes that column
+    const bookingLink = bookingHeaderIndex >= 0 ? (row[bookingHeaderIndex] || '') : '';
 
     // Parse credentials if needed
     const requiresLogin = row[21] && row[21].toLowerCase().includes('yes');
@@ -226,7 +247,9 @@ async function main() {
         screenshots: {
           desktop: desktopPath,
           mobile: mobilePath,
-        }
+        },
+        heroGraphic: heroGraphicPath || undefined,
+        bookingLink: bookingLink || undefined,
       },
       proudestAccomplishment: row[19] || '',
       lessonLearned: row[20] || '',

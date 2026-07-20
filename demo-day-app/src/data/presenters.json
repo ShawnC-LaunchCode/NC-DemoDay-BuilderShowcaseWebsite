@@ -187,9 +187,9 @@
       "targetAudience": "Individuals on probation or parole, especially those managing multiple supervision documents across counties or states. Verity also supports attorneys, case managers, reentry organizations, and family members assisting with successful reentry.",
       "problem": "Probation and parole documents are often written in dense legal language that's difficult to understand during an already stressful transition back into the community. Missing a reporting requirement, misunderstanding a travel restriction, or overlooking a deadline can have serious consequences. While AI has made legal information more accessible, generic chatbots can hallucinate or provide inaccurate guidance—creating unnecessary risk in high-consequence situations. Verity addresses this by helping users understand their own supervision documents through plain-language, source-grounded explanations tied directly to the documents they've uploaded.",
       "keyFeatures": [
-        "1. OCR-Powered Document Processing  Upload supervision documents from your phone or computer. Verity automatically extracts, organizes, and structures the content, making complex legal paperwork searchable and easier to navigate.",
-        "2. Source-Grounded AI Chat\n\nAsk questions about one or multiple uploaded documents at the same time. Every response is grounded in the user's documents—not the AI's memory—to provide explanations tied directly to the original source.",
-        "3. Privacy-First Document Workspace  Manage supervision documents in one secure workspace with ownership-based access, optional accounts, and automatic cleanup for anonymous sessions to help protect sensitive personal information."
+        "OCR-Powered Document Processing  Upload supervision documents from your phone or computer. Verity automatically extracts, organizes, and structures the content, making complex legal paperwork searchable and easier to navigate.",
+        "Source-Grounded AI Chat\n\nAsk questions about one or multiple uploaded documents at the same time. Every response is grounded in the user's documents—not the AI's memory—to provide explanations tied directly to the original source.",
+        "Privacy-First Document Workspace  Manage supervision documents in one secure workspace with ownership-based access, optional accounts, and automatic cleanup for anonymous sessions to help protect sensitive personal information."
       ],
       "biggestChallenge": "The biggest challenge was designing an AI system people could trust in high-consequence situations. Rather than relying on a generic chatbot, I built Verity around source-grounded responses tied directly to uploaded documents, while treating privacy, document ownership, OCR quality, and secure data handling as architectural requirements instead of optional features.",
       "futurePlans": "I'd expand Verity beyond probation and parole by supporting additional legally binding documents such as custody agreements, rental contracts, employment agreements, and court orders. I'd also improve OCR accuracy, multilingual support, and document organization so users can securely manage multiple documents in one workspace and ask questions across them with greater confidence.",
@@ -222,6 +222,113 @@
       "github": "https://github.com/summer-marie",
       "linkedin": "https://www.linkedin.com/in/summer-halsey/",
       "portfolio": "https://shalsey.dev/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "diana-busch",
+    "slug": "diana-busch",
+    "name": "Diana Busch",
+    "bio": "I'm a full-stack developer and CS student based in Prescott, AZ, with a genuine love of learning. I enjoy digging into complicated problems and finding a simpler way through them. Every project is a chance to pick up a new skill or way of thinking, and that curiosity is what keeps me building.",
+    "headshot": "/presenters/diana-busch/headshot.webp",
+    "proudestAccomplishment": "Verifying the law myself. I read the actual statutes for dozens of states on official legislature sites — LexisNexis pulls, .gov PDFs, session laws — and caught errors that would have told real people the wrong thing about their own records: repealed chapters, missing 2025 reforms, eligibility logic inverted. I went from someone who'd never read a statute to someone who can diff one against a rules engine and spot a false-eligibility trap. That skill wasn't in the bootcamp.",
+    "lessonLearned": "Plausible isn't provable. AI can draft at a scale no person can, but for anything high-stakes, the draft is where the work starts, not where it ends. Primary sources are the only ground truth.",
+    "project": {
+      "name": "Turnleaf",
+      "tagline": "Fifty states of record-clearing law. One plain answer, and the form to file next. Turnleaf.",
+      "category": "Legal Help",
+      "targetAudience": "People with past criminal convictions who want to know if they're eligible to have their record cleared, and what steps to take next — across all 50 states, regardless of where they live or how complicated their state's expungement laws are.",
+      "problem": "Expungement and record-clearing laws vary wildly by state and are often buried in dense legal language that's hard for the average person to parse. Someone with a past conviction may be eligible to clear their record and unlock a better job and housing opportunities, but has no easy way to find out — they'd need to track down their state's specific statutes, figure out which ones apply to their situation, and navigate confusing legal terminology just to get a straight answer. Turnleaf solves this by giving people a free, plain-language eligibility check for all 50 states, backed by verified statute citations, plus the actual form they need to file next. No lawyer, no guesswork — just a clear answer and a next step",
+      "keyFeatures": [
+        "Statute-cited eligibility engine — a 50-state decision-tree rules engine where every answer traces back to the actual statute, with verified source links and retrieval dates shown in the UI. Not scraped, not summarized from blogs — you read the legislature sites yourself.",
+        "Plain-language answers with the next step attached — the screener doesn't just say \"eligible under 18 Pa.C.S. § 9122.\" It translates the legal result into a plain answer and points to the form and venue to file next, so someone leaves knowing what to actually do.",
+        "Free, anonymous, and instant — no lawyer consult, no account, no fee to find out. PDF summary generates client-side so nothing sensitive leaves the browser."
+      ],
+      "biggestChallenge": "The data itself. Expungement law is 50 different statutory schemes, and an AI-generated first draft can only ever be plausible — it can't be trusted with repealed statutes, fresh reforms, or citation accuracy. Wrong answers here cause real harm. So I built a verification pipeline: I read each state's statutes on official legislature sites, diff them against the draft rules, and encode fixes with per-statute citations and verified dates. Turning plausible legal data into provable legal data became the whole project.",
+      "futurePlans": "Phone verification of the procedural layer — fees, forms, and filing venues that statutes don't always specify. I'd call clerks' offices in each state to confirm what the law says actually matches what happens at the counter. After that: auto-generated, court-ready petition forms pre-filled from the screener's answers, so the \"form to file next\" isn't just linked — it's done.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Neon",
+        "Vercel",
+        "Groq"
+      ],
+      "aiUsage": [
+        "Testing"
+      ],
+      "liveUrl": "https://www.turnleaf.us/",
+      "repositoryUrl": "https://github.com/DBusch-Developer/turnleaf",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/diana-busch/desktop.webp",
+        "mobile": "/presenters/diana-busch/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/DBusch-Developer",
+      "linkedin": "https://www.linkedin.com/in/diana-busch-a17882363/",
+      "portfolio": "https://diana-busch.com/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "penn-cameron-porterfield",
+    "slug": "penn-cameron-porterfield",
+    "name": "Penn Cameron Porterfield",
+    "bio": "Hey there! My name is Penn. I am a software developer of over 8 years, initially focusing on full-stack web, and now pivoting to more network and systems based challenges. I greatly enjoy work that intersects with Linux and privacy. Currently working to get an out-of-tree Rust SPI driver upstreamed, slowly, while learning to be a positive influence on the FOSS ecosystem as a whole.",
+    "headshot": "/presenters/penn-cameron-porterfield/headshot.webp",
+    "proudestAccomplishment": "The interactive WASM workbench is awesome and I am super happy about how it looks.",
+    "lessonLearned": "Value props are hard.",
+    "project": {
+      "name": "thunk",
+      "tagline": "Thunk teaches people coming home unique programming skills, focusing on open source contributions and low level programming, as a way to help them stand apart when entering the job market.",
+      "category": "Education",
+      "targetAudience": "This is a blend of an education and employment program geared toward those justice impacted individuals that are within their reentry window and want to add a differentiator on their resume. There is a glut of web devs and React experts. Delving into the world of open source and getting closer to the metal is one of the best ways to stand out in a job search plus the mailing lists are all meritocratic.",
+      "problem": "It provides a much needed alternative to the many rentry coding programs that only focus on web development. With LLMs these frontend shops will be the first to go. Thunk gives learners a much more in demand and scarce set of skills. It is trying to solve their employment problem by empowering them by providing tools to make real open source contributions. A merged commit on a resume speaks incredibly loud, the data backs this up. It is thunks goal to provide the initial stepping stop to these learners. It will not be easy, but for those who can stay focused it will be very rewarding.",
+      "keyFeatures": [
+        "The most important feature is the Launchpad which is the system that helps you find, hone and commit your first FOSS issue.",
+        "The Workbench is a live emulation of hardware that is used to demonstrate hard concepts as you go through the work. It is a great way to give learners a visual to the low-level concepts they will be working with.",
+        "The Lessons themselves as they are the core learning engine. We even have XP and levels baked in to help learners track progress."
+      ],
+      "biggestChallenge": "Honestly so far it has been making the lessons fun and engaging. Without that the fear is no one will bother getting to the good stuff. Initially it was just walls of text and multi-choice so it took a lot to make something fluid where the UX was not grating on your soul.",
+      "futurePlans": "So many more lessons, actual in-prison plan with supporting evidence, full blown Saleae lab. So many cool things honestly. My biggest thing is I believe you could easily get this past prison review. The hardware and software costs are negligible. And while it is definitely not easy work there are plenty of people who are capable of it.",
+      "techStack": [
+        "TypeScript",
+        "Rust",
+        "a lot of Rust",
+        "WebAssembly",
+        "SvelteKit 2 + Svelte 5 (runes)",
+        "Cloudflare",
+        "Freedoom (BSD)",
+        "Vite"
+      ],
+      "aiUsage": [
+        "In everything"
+      ],
+      "liveUrl": "https://thunk.goolz.org",
+      "repositoryUrl": "https://github.com/melonmelonz/thunk",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/penn-cameron-porterfield/desktop.webp",
+        "mobile": "/presenters/penn-cameron-porterfield/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/melonmelonz",
+      "linkedin": "https://www.linkedin.com/in/cameron-porterfield-462675228?trk=people-guest_people_search-card",
+      "portfolio": "https://penn.goolz.org"
     },
     "publishing": {
       "approved": true,

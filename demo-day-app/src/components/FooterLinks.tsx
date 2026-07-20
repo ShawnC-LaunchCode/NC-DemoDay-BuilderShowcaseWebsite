@@ -7,21 +7,21 @@ interface FooterLinksProps {
 
 export default function FooterLinks({ presenter }: FooterLinksProps) {
   const { links, project } = presenter;
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || 'https://calendly.com/britannia-bloom/demo-day-follow-up';
 
   const allLinks = [
-    ...(bookingUrl ? [{
-      href: bookingUrl,
-      label: "Book a Meeting",
-      icon: Calendar,
-      accent: true,
-    }] : []),
     {
       href: project.liveUrl,
       label: "Live Demo",
       icon: Globe,
       accent: true,
     },
+    ...(bookingUrl ? [{
+      href: bookingUrl,
+      label: "Start a Conversation",
+      icon: Calendar,
+      accent: true,
+    }] : []),
     {
       href: project.repositoryUrl,
       label: "Repository",

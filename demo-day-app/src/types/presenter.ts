@@ -34,6 +34,7 @@ export const ProjectSchema = z.object({
   demoCredentials: DemoCredentialsSchema.optional(),
   screenshots: ScreenshotsSchema,
   heroGraphic: z.string().optional(),
+  bookingLink: z.string().optional(),
 });
 
 export const LinksSchema = z.object({
