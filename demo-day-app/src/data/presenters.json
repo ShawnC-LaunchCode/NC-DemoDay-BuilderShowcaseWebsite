@@ -468,15 +468,11 @@
         "Multi-Agent Orchestration",
         "Adversarial Review",
         "Security Auditing",
-        "and Deployment Validation"
+        "Deployment Validation"
       ],
       "liveUrl": "https://pathfinder.windwardline.com",
       "repositoryUrl": "https://github.com/windwardline/pathfinder",
       "requiresLogin": true,
-      "demoCredentials": {
-        "username": "Demo Username: Use any email address you can access\nDemo Password: Passwordless—request the secure email sign",
-        "password": "in link (valid for 15 minutes)\n\nPathfinder intentionally avoids shared demo credentials; each reviewer can create a private session using their own email address."
-      },
       "screenshots": {
         "desktop": "/presenters/michael-peacock/desktop.webp",
         "mobile": "/presenters/michael-peacock/mobile.webp"
@@ -485,7 +481,7 @@
     "links": {
       "github": "https://github.com/windwardline",
       "linkedin": "https://www.linkedin.com/in/michaellynnpeacock/",
-      "portfolio": "https://github.com/windwardline"
+      "portfolio": "https://portfolio.windwardline.com"
     },
     "publishing": {
       "approved": true,
@@ -604,6 +600,71 @@
       "github": "https://github.com/kithrine",
       "linkedin": "https://www.linkedin.com/in/kithrine/",
       "portfolio": "https://kithrine.vercel.app/"
+    },
+    "publishing": {
+      "approved": true,
+      "displayOrder": 0,
+      "permissions": []
+    }
+  },
+  {
+    "id": "jordon-walsh",
+    "slug": "jordon-walsh",
+    "name": "Jordon Walsh",
+    "bio": "After spending over a year evaluating AI models on a wide variety of projects as a contractor for data annotation platforms, I realized my real interest lies in the underlying technology and code that makes these systems work. I am currently building my skills as a software developer to make that transition. My focus is on learning how to leverage AI to build reliable, practical tools that solve real-world problems.",
+    "headshot": "/presenters/jordon-walsh/headshot.webp",
+    "proudestAccomplishment": "I’m most proud of building an accessible, responsive application that guides users through a complex legal form, uses AI to help draft accurate personal narratives without inventing facts, and generates completed PDF documents while keeping user data on their device.\n\nI can genuinely see how this tool would help someone do the (niche) task it aims to solve. ",
+    "lessonLearned": "I learned that controlling AI when you want hyper specific UI becomes a real problem if you haven't specifically thought out for yourself *exactly* what that UI must look like. It's difficult enough when you are sure, but when you aren't it can become a huge issue. ",
+    "project": {
+      "name": "Surepath",
+      "tagline": "SurePath helps individuals with past convictions pursue a wide variety of licensed careers confidently by generating the exact, print-ready documents needed to request official criminal history pre-evaluations from state boards to determine eligibility. (",
+      "category": "Employment",
+      "targetAudience": "Individuals re-entering the workforce who want to upskill into licensed career paths, but need to know if their background will prevent licensure before spending time and money on education and training.",
+      "problem": "Individuals re-entering the workforce often avoid pursuing licensed careers because they fear their criminal record will automatically disqualify them. Many states offer official pre-evaluation pipelines so people can find out if they are eligible before spending time and money on training. However, the process is archaic and frustrating—requiring applicants to manually fill out dozens of pages of repetitive documents for every single license they want to consider. SurePath solves this by digitizing the pipeline. It allows users to input their information once, get help framing their background from an AI assistant, and instantly generate the exact, ready-to-mail PDF packets required by state licensing boards to obtain an official eligibility determination.",
+      "keyFeatures": [
+        "Users input their personal and background information just once to instantly generate fully populated, print-ready application packets for multiple licensed careers simultaneously.",
+        "An integrated AI chat assistant helps users reflect on and articulate the circumstances around their past convictions, transforming their raw story into a clear, professional narrative that state licensing boards understand and respect.",
+        "SurePath doesn't just fill out PDFs; it generates detailed, occupation-specific cover sheets that give users step-by-step physical instructions on exactly where and how to mail their packets to complete the submission process."
+      ],
+      "biggestChallenge": "The biggest technical challenge was building a mapping engine to bridge dynamic user data with rigid government PDFs. These state documents are strictly designed to be filled out by hand. Structuring the backend to accurately map a single set of user inputs across a wide variety of differently formatted, occupation-specific PDFs—ensuring the final output is flawlessly aligned and compliant for official mailing—required complex data structuring and precise PDF manipulation.",
+      "futurePlans": "I would expand the database to map out and integrate pre-evaluation pipelines for more states that the current 1 covered by the MVP. ",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "OpenAI API",
+        "Tailwind CSS",
+        "Vercel",
+        "Vite",
+        "Vercel AI SDK",
+        "PDF-Lib",
+        "Zod",
+        "Vitest"
+      ],
+      "aiUsage": [
+        "Planning",
+        "UI Design",
+        "Architecture",
+        "Code Generation",
+        "Debugging",
+        "Documentation",
+        "Learning Concepts",
+        "Testing",
+        "Refactoring"
+      ],
+      "liveUrl": "https://www.asurepath.com",
+      "repositoryUrl": "https://github.com/InvoluntaryRecombinator/surepath",
+      "requiresLogin": false,
+      "screenshots": {
+        "desktop": "/presenters/jordon-walsh/desktop.webp",
+        "mobile": "/presenters/jordon-walsh/mobile.webp"
+      }
+    },
+    "links": {
+      "github": "https://github.com/InvoluntaryRecombinator",
+      "linkedin": "https://www.linkedin.com/in/jordan-walsh-dev",
+      "portfolio": "https://www.jordoncodes.dev"
     },
     "publishing": {
       "approved": true,
