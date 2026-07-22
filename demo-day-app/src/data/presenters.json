@@ -3,10 +3,10 @@
     "id": "phillip-anthony",
     "slug": "phillip-anthony",
     "name": "Phillip Anthony",
-    "bio": "I'm a numbers person at heart. Prediction markets and crypto got me obsessed with calibration: not just predicting an outcome, but knowing how much to trust the prediction. That's what led to PhilaCourtOutcomes, which turns public Philadelphia court docket data into realistic sentencing distributions by charge and judge instead of single point guesses. Before this I spent seven years in IT, and these days I build full-stack with React, TypeScript, and Postgres.",
+    "bio": "I'm a numbers person at heart. Prediction markets and crypto taught me to care about calibration, not just predicting an outcome but knowing how much to trust the prediction. That obsession became PhilaCourtOutcomes, a site that turns public Philadelphia court dockets into real outcome and sentencing distributions by charge and judge. I spent seven years in IT and now build full-stack with React, TypeScript, and Postgres. ",
     "headshot": "/presenters/phillip-anthony/headshot.webp",
-    "proudestAccomplishment": "Catching and fixing a data-integrity bug that automated tests couldn't see. Every internal consistency check passed, but a human ground-truth audit of 46 dockets reviewed line-by-line against source PDFs proved the parser was reading disposition dates from the wrong line. This error silently dropped thousands of dismissals and skewed some charges to ~96% guilty. After the fix and a full-corpus rebuild, the citywide mix corrected to roughly 49% dismissed/withdrawn. The site now tells the truth, and I can prove it against the source documents.",
-    "lessonLearned": "Internal validation proves consistency, not correctness. My pipeline had golden-file regression tests, invariant checks, and full-corpus equivalence tooling (all green) while systematically misreading the source data. Only auditing parser output against the actual PDFs revealed it. Now every acceptance claim traces to ground truth, not just to the machinery agreeing with itself.",
+    "proudestAccomplishment": "The pipeline itself. Real court data is brutally messy, print-formatted PDFs, inconsistent layouts, records split across page breaks, no API anywhere. I built every stage from collection to parsing to aggregation to the live public site, and it runs as one coherent system that turns thousands of raw docket sheets into statistics a non-lawyer can trust.",
+    "lessonLearned": "Plan before code, every time. Every task started as a written spec with numbered acceptance criteria, and the implementation plan was reviewed before a single line was written. It felt slow and saved the project repeatedly.",
     "project": {
       "name": "Phila Court Outcomes",
       "tagline": "Phila Court Outcomes shows how Philadelphia criminal cases actually resolved. It provides historical outcome and sentencing breakdowns by charge and judge, built from public court dockets, it helps people facing charges see real data instead of guesswork.",
@@ -14,12 +14,12 @@
       "targetAudience": "Primarily non-lawyers facing criminal charges in Philadelphia who need plain-language context about how cases like theirs historically ended. Secondarily, defense attorneys, journalists, and researchers studying court outcomes.",
       "problem": "People facing criminal charges in Philadelphia have almost no way to know what typically happens in cases like theirs. Court dockets are public but scattered across thousands of individual PDFs, written in legal jargon, and impossible to aggregate by hand. Defendants make high-stakes decisions (such as whether to take a plea or what to expect at sentencing) with no factual baseline. Phila Court Outcomes scrapes, parses, and aggregates Municipal Court and Court of Common Pleas dockets into searchable, charge-level outcome and sentencing distributions. The data is presented in plain language with honest disclosures about data coverage, offering no predictions or legal advice, but simply showing what the record says.",
       "keyFeatures": [
-        "Charge-level outcome distributions: search any Philadelphia criminal charge and see how cases with that charge historically resolved (dismissed, withdrawn, guilty plea, acquittal), built from a corpus of 30,000+ parsed court dockets.",
+        "Charge-level outcome distributions. Search any Philadelphia criminal charge and see how cases with that charge historically resolved, whether dismissed, withdrawn, pled guilty, or acquitted, built from thousands of parsed court dockets.",
         "Sentencing breakdowns for convictions. When cases like a given charge ended in conviction, see what sentences were actually imposed.",
-        "Judge-level views where available. This provides the same outcome data filterable by the presiding judge, with strict framing safeguards: no rankings, no comparisons, no predictive language, and a sample-size disclosure on every result."
+        "Judge-level views where available. This provides the same outcome data filterable by the presiding judge, with strict framing safeguards."
       ],
-      "biggestChallenge": "Parsing semi-structured court PDF dockets accurately at scale. A ground-truth audit of 46 dockets against source PDFs revealed the parser was reading disposition dates from the wrong line. This error inflated apparent guilty rates by silently dropping thousands of dated dismissals. Fixing it required a line-state-machine rewrite, golden-file regression tooling, and full-corpus delta verification before republishing.",
-      "futurePlans": "A conviction-denominated sentencing index (% receiving confinement, probation, or fines, with medians), a per-charge case-funnel view showing filed → disposed → convicted → sentenced volumes, and continued collection to close the full 2025-to-present filing window — plus the parser hardening backlog surfaced by the ground-truth audit.",
+      "biggestChallenge": "The hardest problem wasn't technical, it was statistical honesty. Recent cases skew guilty because dismissals take longer to resolve, so a naive site would quietly overstate conviction rates. I built the product around that reality, with date-window disclosures, sample-size labels on every result, and strict copy rules banning predictions and rankings, so a non-lawyer sees true numbers framed truthfully.",
+      "futurePlans": "Next up is the professional side of the data. Outcome statistics by defense attorney and prosecutor, so someone facing charges can see real track records instead of marketing claims, plus an attorney-facing dashboard with deeper filters and exports as the paid tier.",
       "techStack": [
         "React",
         "TypeScript",
@@ -53,7 +53,7 @@
       "repositoryUrl": "https://github.com/philay3/Phila-Court-Analytics/tree/main",
       "requiresLogin": false,
       "screenshots": {
-        "desktop": "/presenters/phillip-anthony/desktop.webp",
+        "desktop": "https://i.imgur.com/9lt2gUm.png",
         "mobile": "/presenters/phillip-anthony/mobile.webp"
       }
     },
@@ -591,6 +591,10 @@
       "liveUrl": "https://project-nova.app/",
       "repositoryUrl": "https://github.com/kithrine/project-nova",
       "requiresLogin": true,
+      "demoCredentials": {
+        "username": "This is a real, working environment at project",
+        "password": "nova.app — not a mockup. The five accounts below each show a different side of the program: a participant's journey, the operations pipeline, a shelter's approvals, grant reporting, and administration.\n\nPlease explore freely. Every name, application, and timesheet is fictional demo data — nothing you approve, reject, submit, or edit affects a real person or program, and the environment resets itself regularly. You genuinely can't break anything.\n\n*Sign in with any account — they all share the same password: NovaDemo2026!\n\n- Participant (Katie's journey): participant@project-nova.app\n- Program coordinator: ops@project-nova.app\n- Shelter manager: shelter@project-nova.app\n- Grant administrator: grants@project-nova.app\n- Administrator: admin@project-nova.app\nPassword for all five: NovaDemo2026!"
+      },
       "screenshots": {
         "desktop": "/presenters/katherine-tensfeldt/desktop.webp",
         "mobile": "/presenters/katherine-tensfeldt/mobile.webp"
