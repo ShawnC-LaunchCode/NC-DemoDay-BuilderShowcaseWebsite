@@ -351,7 +351,7 @@
     "links": {
       "github": "https://github.com/destinyheather92",
       "linkedin": "https://linkedin.com/in/destinyhmills225",
-      "portfolio": "https://dmdigitalboutique.com"
+      "portfolio": "https://dmillsportfolio.vercel.app/"
     },
     "publishing": {
       "approved": true,
@@ -558,7 +558,7 @@
     "id": "penn-cameron-porterfield",
     "slug": "penn-cameron-porterfield",
     "name": "Penn Cameron Porterfield",
-    "bio": "Hey there! My name is Penn. I am a software developer of over 8 years, initially focusing on full-stack web, and now pivoting to more network and systems based challenges. I greatly enjoy work that intersects with Linux and privacy. Currently working to get an out-of-tree Rust SPI driver upstreamed, slowly, while learning to be a positive influence on the FOSS ecosystem as a whole.",
+    "bio": "Hey there! My name is Penn. I am a software developer of over 8 years, initially focusing on full-stack web, and now pivoting to more network and systems based challenges. I greatly enjoy work that intersects with Linux and privacy. Currently working to get an out-of-tree Rust SPI driver up-streamed, slowly, while learning to be a positive influence on the FOSS ecosystem as a whole.",
     "headshot": "/presenters/penn-cameron-porterfield/headshot.webp",
     "proudestAccomplishment": "The interactive WASM workbench is awesome and I am super happy about how it looks.",
     "lessonLearned": "Value props are hard.",
@@ -567,7 +567,7 @@
       "tagline": "Thunk teaches people coming home unique programming skills, focusing on open source contributions and low level programming, as a way to help them stand apart when entering the job market.",
       "category": "Education",
       "targetAudience": "This is a blend of an education and employment program geared toward those justice impacted individuals that are within their reentry window and want to add a differentiator on their resume. There is a glut of web devs and React experts. Delving into the world of open source and getting closer to the metal is one of the best ways to stand out in a job search plus the mailing lists are all meritocratic.",
-      "problem": "It provides a much needed alternative to the many rentry coding programs that only focus on web development. With LLMs these frontend shops will be the first to go. Thunk gives learners a much more in demand and scarce set of skills. It is trying to solve their employment problem by empowering them by providing tools to make real open source contributions. A merged commit on a resume speaks incredibly loud, the data backs this up. It is thunks goal to provide the initial stepping stop to these learners. It will not be easy, but for those who can stay focused it will be very rewarding.",
+      "problem": "It provides a much needed alternative to the many reentry coding programs that only focus on web development. With LLMs these frontend shops will be the first to go. Thunk gives learners a much more in demand and scarce set of skills. It is trying to solve their employment problem by empowering them by providing tools to make real open source contributions. A merged commit on a resume speaks incredibly loud, the data backs this up. It is thunks goal to provide the initial stepping stop to these learners. It will not be easy, but for those who can stay focused it will be very rewarding.",
       "keyFeatures": [
         "The most important feature is the Launchpad which is the system that helps you find, hone and commit your first FOSS issue.",
         "The Workbench is a live emulation of hardware that is used to demonstrate hard concepts as you go through the work. It is a great way to give learners a visual to the low-level concepts they will be working with.",
@@ -578,7 +578,6 @@
       "techStack": [
         "TypeScript",
         "Rust",
-        "a lot of Rust",
         "WebAssembly",
         "SvelteKit 2 + Svelte 5 (runes)",
         "Cloudflare",
@@ -586,9 +585,9 @@
         "Vite"
       ],
       "aiUsage": [
-        "In everything"
+        "In everything."
       ],
-      "liveUrl": "https://thunk.goolz.org",
+      "liveUrl": "https://thunk.goolz.org/",
       "repositoryUrl": "https://github.com/melonmelonz/thunk",
       "requiresLogin": false,
       "screenshots": {
@@ -599,7 +598,7 @@
     "links": {
       "github": "https://github.com/melonmelonz",
       "linkedin": "https://www.linkedin.com/in/cameron-porterfield-462675228?trk=people-guest_people_search-card",
-      "portfolio": "https://penn.goolz.org"
+      "portfolio": "https://penn.goolz.org/"
     },
     "publishing": {
       "approved": true,
